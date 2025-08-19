@@ -1,5 +1,7 @@
 import styles from './leftImageCard.module.css';
 import Image from 'next/Image';
+import SeeMoreButton from "@/components/bigCards/seeMoreButton";
+import FeaturesCard from "@/components/bigCards/featuresCard";
 
 type Props = {
     image: string;
@@ -9,26 +11,31 @@ type Props = {
     forbidden: string;
 }
 
-export default function LeftImageCard({image, name, cantGuests, description, forbidden} = Props) {
+export default function LeftImageCard({image, name, cantGuests, description, forbidden} : Props) {
     return (
-        <main className={styles.main}>
-            <div className={styles.image}>
-                <Image
-                    src={image}
-                    alt={'imagen principal del departamento'}
-                    fill
-                />
-            </div>
+      <main className={styles.main}>
+        <div className={styles.image}>
+          <Image
+              src={image}
+              alt={"imagen principal del departamento"}
+              fill
+              style={{ objectFit: "cover" }}
+          />
+        </div>
 
-            <div className={styles.info}>
-                <h1>{name}</h1>
-                <h2>{cantGuests}</h2>
-                <h5>{description}</h5>
-                <FeaturesCard/>
-                <h5>{forbidden}</h5>
+        <div className={styles.info}>
+          <div>
+            <h1>{name}</h1>
+            <h2>Departamento apto {cantGuests} personas</h2>
+          </div>
+          <h5>{description}</h5>
+          <FeaturesCard bathrooms={5} dorms={3} />
+          <h5>{forbidden}</h5>
 
-                <SeeMoreButton/>
-            </div>
-        </main>
-    )
+          <SeeMoreButton
+              personalizedClassName={'dark'}
+          />
+        </div>
+      </main>
+    );
 }

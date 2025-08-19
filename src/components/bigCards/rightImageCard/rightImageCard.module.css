@@ -7,7 +7,8 @@
 
     padding: var(--20px);
 
-    background-color: var(--caqui-3);
+    background-color: var(--aqua-5);
+    color: var(--caqui-1);
 }
 .main h1, .main h2, .main h5 {
     margin: 0;

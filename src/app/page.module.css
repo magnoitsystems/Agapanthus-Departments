@@ -4,3 +4,11 @@
 
   width: 100%;
 }
+
+.deptos {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: var(--50px);
+  gap: var(--50px);
+}
