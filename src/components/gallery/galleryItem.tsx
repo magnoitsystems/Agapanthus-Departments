@@ -1,4 +1,5 @@
 import styles from "./gallery.module.css";
+import {abyssinica} from "@/app/ui/fonts";
 
 export type ImageSize = "square" | "horizontal" | "vertical" | "large";
 
@@ -37,7 +38,7 @@ export default function GalleryItem({
       <img src={img.src} alt={img.title || "gallery"} />
       {img.highlight && (
         <div className={`${styles.overlay} ${isActive ? styles.active : ""}`}>
-          <h3>{img.title}</h3>
+          <h3 className={`${abyssinica.className}`}>{img.title}</h3>
           {isActive && img.description && <p>{img.description}</p>}
         </div>
       )}

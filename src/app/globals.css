@@ -9,6 +9,7 @@
   --aqua-4: #487E6C;
   --aqua-5: #31594C;
   --aqua-6: #1B362D;
+  --aqua-overlay:  rgba(20, 98, 86, 0.8);
 
   --caqui-1: #F7EDCF;
   --caqui-2: #D5C58A;
@@ -28,6 +29,7 @@
   /*padding/margin values*/
   --1px: 0.0625; /* 1px */
   --5px: 0.3125rem; /* 5px */
+  --8px: 8px;
   --10px: 0.625rem; /* 10px */
   --15px: 0.9375rem; /* 15px */
   --20px: 1.25rem; /* 20px */

@@ -1,16 +1,16 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 columnas para formato horizontal */
-  gap: 12px;
-  margin: 0 20px;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: var(--10px);
+  margin: 0 var(--20px);
   grid-auto-flow: dense;
-  grid-auto-rows: 140px; /* Altura uniforme para las filas */
+  grid-auto-rows: 140px; 
 }
 
 .item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: var(--8px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,6 @@
   transform: scale(1.04); 
 }
 
-/* ----- TAMAÑOS DEL GRID ----- */
 .square {                 
   grid-column: span 1;
   grid-row: span 1;
@@ -52,7 +51,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 70, 60, 0.65);
+  background: var(--aqua-overlay);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -64,21 +63,23 @@
   padding: 16px;
 }
 
-.overlay h3 { 
-  font-size: 1.3rem;
-  margin-bottom: 8px; 
+.title { 
+  font-size: var(--30px);
+  margin-bottom: 0;
   font-weight: 600;
+  line-height: 1.2;
 }
 
-.overlay p { 
-  font-size: 0.9rem;
-  line-height: 1.3; 
+.description { 
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .active { opacity: 1 !important; }
 .dimmed .overlay { opacity: 0 !important; }
 
-/* Responsive */
+/* Responsive to see well the gallery in every screen */
 @media (max-width: 1200px) {
   .grid { 
     grid-template-columns: repeat(5, 1fr);
