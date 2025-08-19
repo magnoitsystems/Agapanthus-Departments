@@ -10,9 +10,11 @@ export default function Home() {
   return (
     <div className={styles.page}>
         <MainNavBar/>
-        <Welcome/>
+        <section id={'nuestro-complejo'}>
+            <Welcome/>
+        </section>
 
-        <div className={styles.deptos}>
+        <div className={styles.deptos} id={'cabanas'}>
             <LeftImageCard
                 image={'/testImages/interactiveGallery/prue.png'}
                 name={'Aqua'}
@@ -29,7 +31,9 @@ export default function Home() {
             />
         </div>
 
-        <Form />
+        <div id={'reservas'}>
+            <Form/>
+        </div>
         <Footer />
     </div>
   );
