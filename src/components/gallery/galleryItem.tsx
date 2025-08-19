@@ -1,12 +1,17 @@
 import styles from "./gallery.module.css";
 
+export type ImageSize = "square" | "horizontal" | "vertical" | "large";
+
+export interface GalleryImage {
+  src: string;
+  title?: string;
+  description?: string;
+  highlight: boolean;
+  size?: ImageSize;
+}
+
 interface Props {
-  img: {
-    src: string;
-    title?: string;
-    description?: string;
-    highlight: boolean;
-  };
+  img: GalleryImage;
   index: number;
   activeIndex: number | null;
   setActiveIndex: (index: number | null) => void;
@@ -23,7 +28,9 @@ export default function GalleryItem({
 
   return (
     <div
-      className={`${styles.item} ${isDimmed ? styles.dimmed : ""}`}
+      className={`${styles.item} ${styles[img.size || "square"]} ${
+        isDimmed ? styles.dimmed : ""
+      }`}
       onMouseEnter={() => setActiveIndex(index)}
       onMouseLeave={() => setActiveIndex(null)}
     >

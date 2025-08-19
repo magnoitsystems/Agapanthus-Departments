@@ -14,5 +14,6 @@
 }
 
 .gallery{
-  margin-top: 50px;
+  margin-top: var(--40px);
+  margin-bottom: var(--40px) ;
 }
