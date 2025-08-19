@@ -5,12 +5,16 @@ import Footer from "@/components/footer/footer"
 import LeftImageCard from "@/components/bigCards/leftImageCard/leftImageCard";
 import RightImageCard from "@/components/bigCards/rightImageCard/rightImageCard";
 import Form from "./(views)/form/page";
+import Gallery from "@/components/gallery/gallery";
 
 export default function Home() {
   return (
     <div className={styles.page}>
         <MainNavBar/>
         <Welcome/>
+        <div className={styles.gallery}>
+              <Gallery></Gallery>
+        </div>
 
         <div className={styles.deptos}>
             <LeftImageCard
