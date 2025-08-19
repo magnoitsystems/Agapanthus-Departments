@@ -1,0 +1,116 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: var(--10px);
+  margin: 0 var(--20px);
+  grid-auto-flow: dense;
+  grid-auto-rows: 140px; 
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item:hover img { 
+  transform: scale(1.04); 
+}
+
+.square {                 
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.horizontal {             
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.vertical {               
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.large {                  
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--aqua-overlay);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+  padding: 16px;
+}
+
+.title { 
+  font-size: var(--30px);
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.description { 
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.active { opacity: 1 !important; }
+.dimmed .overlay { opacity: 0 !important; }
+
+/* Responsive to see well the gallery in every screen */
+@media (max-width: 1200px) {
+  .grid { 
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 130px;
+  }
+}
+
+@media (max-width: 1024px) { 
+  .grid { 
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid { 
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 110px;
+  }
+  .large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid { 
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+  }
+  .horizontal, .vertical, .large { 
+    grid-column: span 1; 
+    grid-row: span 1; 
+  }
+}

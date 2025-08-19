@@ -12,3 +12,7 @@
   margin-bottom: var(--50px);
   gap: var(--50px);
 }
+
+.gallery{
+  margin-bottom: var(--50px) ;
+}

@@ -1,0 +1,228 @@
+.reviewsSection {
+  padding: 80px 0; /* padding vertical, horizontal en 0 para full width */
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Agregamos padding horizontal al contenedor para que el resto del contenido no esté pegado a los bordes */
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #34495e;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Formulario */
+.formSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input {
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  background: var(--caqui-5);
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.input::placeholder {
+  color: #7f8c8d;
+  opacity: 0.8;
+}
+
+.input:focus {
+  outline: none;
+  background: var(--caqui-4);
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(165, 160, 123, 0.2);
+}
+
+.nameInput {
+  height: 60px;
+}
+
+.experienceInput {
+  min-height: 80px;
+  max-height: 200px;
+  resize: none;
+  font-family: inherit;
+  overflow-y: auto;
+}
+
+.inputLabel {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.submitButton {
+  padding: 12px 30px;
+  background: var(--aqua-3);
+  color: white;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  max-width: 160px;
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.1);
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px var(--aqua-2);
+  background: var(--aqua-4);
+}
+
+/* Carrusel de reseñas */
+.reviewsCarousel {
+  margin-top: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollingWrapper {
+  overflow: hidden;
+  /* Eliminadas las propiedades mask-image para que no se desvanezcan los extremos */
+}
+
+.scrollingContent {
+  display: flex;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.reviewCard {
+  min-width: 320px;
+  padding: 30px;
+  background: linear-gradient(135deg, #74b9c7, #5a9fb0);
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 8px 30px rgba(116, 185, 199, 0.3);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.reviewCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  pointer-events: none;
+}
+
+.reviewName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.reviewText {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .form {
+    gap: 20px;
+  }
+  
+  .reviewCard {
+    min-width: 280px;
+    padding: 24px;
+  }
+  
+  .scrollingContent {
+    animation-duration: 25s;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviewsSection {
+    padding: 60px 15px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .reviewCard {
+    min-width: 250px;
+    padding: 20px;
+  }
+}
