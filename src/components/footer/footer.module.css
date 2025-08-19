@@ -1,0 +1,77 @@
+.footerProperties{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 356px;
+    width: 100%;
+    background-color: var(--aqua-4);
+}
+
+.mainFooterProperties{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.footerWithCopyright{
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    width: 100%;
+    background-color: var(--aqua-5);
+}
+
+.copyrightProperties{
+    display: flex;
+    flex-direction: row;
+    padding-left: 38%;
+    white-space: none;
+    padding-top: 70px;
+}
+
+.logoMagnoProperties{
+    padding-left: 30%;
+    padding-top: 10px;
+}
+
+.footerWithCopyright span, .redirectionSideProperties a{
+    color: var(--neutral-6);
+    font-size: var(--20px);
+    font-family: Abyssinica SIL;
+}
+
+.iconPhoneProperties{
+    width: 75px;
+    height: 75px;
+    background-color: var(--neutral-6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+}
+
+.logoProperties{
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+.redirectionsProperties{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    gap: 10px;
+}
+
+.iconsProperties{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.redirectionSideProperties{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
