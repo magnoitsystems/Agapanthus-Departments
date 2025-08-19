@@ -6,6 +6,7 @@ import LeftImageCard from "@/components/bigCards/leftImageCard/leftImageCard";
 import RightImageCard from "@/components/bigCards/rightImageCard/rightImageCard";
 import Form from "./(views)/form/page";
 import Gallery from "@/components/gallery/gallery";
+import ReviewsSection from "@/components/reviews/reviewsSection";
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
         </div>
 
         <Form />
+        <div className={styles.gallery}>
+          <ReviewsSection></ReviewsSection>
+        </div>
         <Footer />
     </div>
   );
