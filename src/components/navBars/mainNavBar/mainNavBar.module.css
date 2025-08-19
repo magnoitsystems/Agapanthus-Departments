@@ -1,4 +1,4 @@
-/*main container*/
+/*MAIN CONTAINER*/
 .main {
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     background-size: cover;
 }
 
-/*nav bar*/
+/*NAV BAR*/
 .nav {
     display: flex;
     flex-direction: row;
@@ -31,7 +31,8 @@
     );
 }
 
-/*sections bar*/
+/*SECTIONS BAR*/
+/*container*/
 .sectionsBar {
     display: flex;
     flex-direction: row;
@@ -47,6 +48,11 @@
 
     background-color: rgba(247, 237, 207, 0.45);
     border-radius: 5px;
+
+    transition: all ease-in-out 0.3s;
+}
+.sectionsBar:hover {
+    background-color: rgba(247, 237, 207, 0.70);
 }
 
 .sectionsBar h3 {
@@ -57,6 +63,7 @@
     color: var(--caqui-1);
 }
 
+/*gral buttons*/
 .section {
     display: flex;
     flex-direction: row;
@@ -66,8 +73,39 @@
     width: 31%;
     height: fit-content;
 
-    padding: var(--20px);
+    padding: var(--15px);
 
     background-color: var(--aqua-4);
     border-radius: 5px;
+
+    transition: all ease-in-out 0.3s;
+}
+.section:hover {
+    background-color: var(--aqua-5);
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.40);
+}
+
+/*dropdown button*/
+.dropdown {
+    flex-direction: column;
+
+    gap: var(--15px);
+
+    transition: all ease-in-out 0.3s;
+}
+.dropdown:hover .deptos{
+    display: flex;
+}
+
+.dropdown .mainInfo {
+    flex-direction: row;
+}
+
+.deptos {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all ease-in-out 0.3s;
 }
