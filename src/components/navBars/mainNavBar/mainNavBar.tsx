@@ -7,10 +7,10 @@ export default function MainNavBar() {
       <main className={styles.main}>
         <nav className={styles.nav}>
           <Image
-            src={"/logos/blanco.png"}
+            src={"/logos/white.png"}
             alt={"logo rectangular de Agapanthus - Cabañas Las Marias"}
-            width={444}
-            height={85}
+            width={418}
+            height={100}
           />
         </nav>
 
