@@ -115,7 +115,7 @@
 .submitButton:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px var(--aqua-2);
-  background: linear-gradient(135deg, var(--aqua-1), var(--aqua-2));
+  background: var(--aqua-4)
 }
 
 /* Carrusel de reseñas */
@@ -127,6 +127,8 @@
 
 .scrollingWrapper {
   overflow: hidden;
+  /* Removidas las propiedades mask-image para eliminar el blur en los extremos */
+  /*  */
   mask-image: linear-gradient(
     to right,
     transparent 0%,
@@ -141,6 +143,7 @@
     black 90%,
     transparent 100%
   );
+ 
 }
 
 .scrollingContent {
