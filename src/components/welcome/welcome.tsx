@@ -1,8 +1,17 @@
-import styles from './welcome.module.css';
+"use client";
+
+import { motion } from "framer-motion";
+import styles from "./welcome.module.css";
 
 export default function Welcome() {
     return (
-        <main className={styles.main}>
+        <motion.main
+            className={styles.main}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+        >
             <h1>
                 Hospédese en la ciudad de Tandil junto a nosotros
             </h1>
@@ -12,6 +21,6 @@ export default function Welcome() {
                 atención personalizada y la comodidad que merecés. Ideal para familias, parejas o grupos de amigos que buscan
                 descanso y conexión con la naturaleza sin alejarse de la ciudad.
             </h5>
-        </main>
-    )
+        </motion.main>
+    );
 }

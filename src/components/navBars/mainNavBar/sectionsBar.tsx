@@ -1,4 +1,4 @@
-'use client'; // Agrega esta línea para habilitar useState y eventos de clic
+'use client';
 
 import { useState } from 'react';
 import styles from "@/components/navBars/mainNavBar/mainNavBar.module.css";
