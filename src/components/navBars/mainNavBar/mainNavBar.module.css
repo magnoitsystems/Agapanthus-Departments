@@ -35,16 +35,17 @@
 /*container*/
 .sectionsBar {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-    width: 70%;
+    width: 90%;
     height: fit-content;
 
     margin: auto;
     padding: var(--20px);
     padding-inline: var(--25px);
+    gap: var(--20px);
 
     background-color: rgba(247, 237, 207, 0.45);
     border-radius: 5px;
@@ -70,7 +71,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 31%;
+    width: 100%;
     height: fit-content;
 
     padding: var(--15px);
@@ -108,4 +109,23 @@
     align-items: center;
 
     transition: all ease-in-out 0.3s;
+}
+
+/*responsive for tablet*/
+@media (min-width: 768px) {
+    .sectionsBar {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .section {
+        width: 31%;
+    }
+}
+
+/*responsive for desktop*/
+@media (min-width: 1024px) {
+    .sectionsBar {
+        width: 70%;
+    }
 }

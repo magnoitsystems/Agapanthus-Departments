@@ -5,12 +5,12 @@
     align-items: center;
     justify-content: center;
 
-    width: 70%;
+    width: 95%;
     height: fit-content;
 
     margin: 6rem;
     margin-inline: auto;
-    gap: var(--50px);
+    gap: var(--30px);
 
     text-align: center;
     line-height: 2rem;
@@ -21,4 +21,12 @@
     padding: 0;
 
     font-weight: lighter;
+}
+
+@media (min-width: 768px) {
+    .main {
+        width: 70%;
+
+        gap: var(--50px);
+    }
 }

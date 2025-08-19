@@ -14,6 +14,15 @@ type Props = {
 export default function RightImageCard({image, name, cantGuests, description, forbidden} : Props) {
     return (
         <main className={styles.main}>
+            <div className={styles.topImage}>
+                <Image
+                    src={image}
+                    alt={"imagen principal del departamento"}
+                    fill
+                    style={{objectFit: "cover"}}
+                />
+            </div>
+
             <div className={styles.info}>
                 <div>
                     <h1>{name}</h1>
@@ -28,7 +37,7 @@ export default function RightImageCard({image, name, cantGuests, description, fo
                 />
             </div>
 
-            <div className={styles.image}>
+            <div className={styles.bottomImage}>
                 <Image
                     src={image}
                     alt={"imagen principal del departamento"}

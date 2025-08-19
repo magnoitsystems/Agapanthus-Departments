@@ -47,7 +47,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 40%;
+    width: 100%;
     height: fit-content;
 
     background-color: var(--caqui-1);
@@ -69,4 +69,17 @@
     gap: var(--20px);
 
     border-bottom: 1px solid var(--caqui-5);
+}
+
+
+@media (min-width: 768px) {
+    .featuresCard {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .featuresCard {
+        width: 40%;
+    }
 }
