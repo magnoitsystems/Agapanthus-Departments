@@ -4,6 +4,7 @@ import Welcome from "@/components/welcome/welcome";
 import Footer from "@/components/footer/footer"
 import LeftImageCard from "@/components/bigCards/leftImageCard/leftImageCard";
 import RightImageCard from "@/components/bigCards/rightImageCard/rightImageCard";
+import Form from "./(views)/form/page";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
             />
         </div>
 
+        <Form />
         <Footer />
     </div>
   );
