@@ -1,16 +1,18 @@
+/*main container*/
 .main {
     display: flex;
     flex-direction: column;
 
     width: 100vw;
-    height: fit-content;
-
-    margin: 0;
-    padding: 0;
+    height: 100vh; /* 700px */
 
     background-image: url("/testImages/navBarBackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
+/*nav bar*/
 .nav {
     display: flex;
     flex-direction: row;
@@ -27,4 +29,36 @@
             rgba(59,54,35,1),
             rgba(59,54,35,0)
     );
+}
+
+/*sections bar*/
+.sectionsBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70%;
+    height: fit-content;
+
+    padding: var(--20px);
+    padding-inline: var(--25px);
+
+    background-color: rgba(247, 237, 207, 0.45);
+    border-radius: 5px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 31%;
+    height: fit-content;
+
+    padding: var(--20px);
+
+    background-color: var(--aqua-4);
+    border-radius: 5px;
 }
