@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./ReviewsSection.module.css";
-import { abyssinica } from "@/app/ui/fonts"; // Asumiendo que tienes esta fuente
+import { abyssinica } from "@/app/ui/fonts";
 
 interface Review {
   id: number;
@@ -48,15 +48,14 @@ export default function ReviewsSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío del formulario
     console.log("Nueva reseña:", { name, experience });
-    // Limpiar formulario
     setName("");
     setExperience("");
   };
 
   return (
     <section className={styles.reviewsSection}>
+      {/* El contenido del header y el formulario permanece dentro del contenedor para centrarlo */}
       <div className={styles.container}>
         {/* Título principal */}
         <div className={styles.header}>
@@ -68,7 +67,6 @@ export default function ReviewsSection() {
           </h3>
         </div>
 
-        {/* Formulario */}
         <div className={styles.formSection}>
           <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.inputGroup}>
@@ -91,7 +89,6 @@ export default function ReviewsSection() {
                 value={experience}
                 onChange={(e) => {
                   setExperience(e.target.value);
-                  // Auto-resize del textarea
                   const target = e.target as HTMLTextAreaElement;
                   target.style.height = 'auto';
                   target.style.height = target.scrollHeight + 'px';
@@ -110,23 +107,22 @@ export default function ReviewsSection() {
             </button>
           </form>
         </div>
-
-        {/* Carrusel de reseñas */}
-        <div className={styles.reviewsCarousel}>
-          <div className={styles.scrollingWrapper}>
-            <div className={styles.scrollingContent}>
-              {/* Duplicamos las reseñas para el efecto infinito */}
-              {[...reviews, ...reviews].map((review, index) => (
-                <div key={`${review.id}-${index}`} className={styles.reviewCard}>
-                  <h4 className={`${styles.reviewName} ${abyssinica.className}`}>
-                    {review.name}
-                  </h4>
-                  <p className={`${styles.reviewText} ${abyssinica.className}`}>
-                    {review.text}
-                  </p>
-                </div>
-              ))}
-            </div>
+      </div>
+      
+      {/* El carrusel se mueve fuera del contenedor para que ocupe el 100% del ancho */}
+      <div className={styles.reviewsCarousel}>
+        <div className={styles.scrollingWrapper}>
+          <div className={styles.scrollingContent}>
+            {[...reviews, ...reviews].map((review, index) => (
+              <div key={`${review.id}-${index}`} className={styles.reviewCard}>
+                <h4 className={`${styles.reviewName} ${abyssinica.className}`}>
+                  {review.name}
+                </h4>
+                <p className={`${styles.reviewText} ${abyssinica.className}`}>
+                  {review.text}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

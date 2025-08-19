@@ -1,5 +1,5 @@
 .reviewsSection {
-  padding: 80px 20px;
+  padding: 80px 0; /* padding vertical, horizontal en 0 para full width */
   background: #f8f9fa;
   overflow: hidden;
 }
@@ -7,6 +7,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px; /* Agregamos padding horizontal al contenedor para que el resto del contenido no esté pegado a los bordes */
 }
 
 /* Header */
@@ -68,7 +69,7 @@
 
 .input:focus {
   outline: none;
-  background: var(--caqui-5);
+  background: var(--caqui-4);
   opacity: 0.9;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(165, 160, 123, 0.2);
@@ -79,9 +80,9 @@
 }
 
 .experienceInput {
-  min-height: 80px; /* Altura mínima más pequeña */
-  max-height: 200px; /* Altura máxima */
-  resize: none; /* Deshabilitamos resize manual */
+  min-height: 80px;
+  max-height: 200px;
+  resize: none;
   font-family: inherit;
   overflow-y: auto;
 }
@@ -93,17 +94,17 @@
 }
 
 .submitButton {
-  padding: 12px 30px; /* Más pequeño */
+  padding: 12px 30px;
   background: var(--aqua-3);
   color: white;
   border: 3px solid rgb(0, 0, 0);
   border-radius: 12px;
-  font-size: 1rem; /* Fuente más pequeña */
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: center;
-  max-width: 160px; /* Ancho máximo más pequeño */
+  max-width: 160px;
 }
 
 .submitButton:hover {
@@ -115,7 +116,7 @@
 .submitButton:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px var(--aqua-2);
-  background: var(--aqua-4)
+  background: var(--aqua-4);
 }
 
 /* Carrusel de reseñas */
@@ -127,23 +128,7 @@
 
 .scrollingWrapper {
   overflow: hidden;
-  /* Removidas las propiedades mask-image para eliminar el blur en los extremos */
-  /*  */
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
- 
+  /* Eliminadas las propiedades mask-image para que no se desvanezcan los extremos */
 }
 
 .scrollingContent {
