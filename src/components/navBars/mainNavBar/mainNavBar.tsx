@@ -15,15 +15,15 @@ export default function MainNavBar() {
 
             <div className={styles.sectionsBar}>
                 <div className={`${styles.section} ${styles.classic}`}>
-                    <h4>Nuestro complejo</h4>
+                    <h3>Nuestro complejo</h3>
                 </div>
 
                 <div className={`${styles.section} ${styles.dropdown}`}>
-                    <h4>Cabañas</h4>
+                    <h3>Cabañas</h3>
                 </div>
 
                 <div className={`${styles.section} ${styles.classic}`}>
-                    <h4>Reservas</h4>
+                    <h3>Reservas</h3>
                 </div>
             </div>
         </main>

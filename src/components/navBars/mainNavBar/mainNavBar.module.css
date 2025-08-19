@@ -41,11 +41,20 @@
     width: 70%;
     height: fit-content;
 
+    margin: auto;
     padding: var(--20px);
     padding-inline: var(--25px);
 
     background-color: rgba(247, 237, 207, 0.45);
     border-radius: 5px;
+}
+
+.sectionsBar h3 {
+    margin: 0;
+    padding: 0;
+
+    font-weight: lighter;
+    color: var(--caqui-1);
 }
 
 .section {
