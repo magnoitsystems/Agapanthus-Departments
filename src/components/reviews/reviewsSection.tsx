@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "./reviewsSection.module.css";
+import styles from "./ReviewsSection.module.css";
 import { abyssinica } from "@/app/ui/fonts"; // Asumiendo que tienes esta fuente
 
 interface Review {
@@ -89,9 +89,15 @@ export default function ReviewsSection() {
               <textarea
                 placeholder="Acá tu experiencia"
                 value={experience}
-                onChange={(e) => setExperience(e.target.value)}
+                onChange={(e) => {
+                  setExperience(e.target.value);
+                  // Auto-resize del textarea
+                  const target = e.target as HTMLTextAreaElement;
+                  target.style.height = 'auto';
+                  target.style.height = target.scrollHeight + 'px';
+                }}
                 className={`${styles.input} ${styles.experienceInput}`}
-                rows={4}
+                rows={2}
                 required
               />
               <span className={styles.inputLabel}>
