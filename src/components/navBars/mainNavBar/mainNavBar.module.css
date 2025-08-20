@@ -31,6 +31,13 @@
     );
 }
 
+.mobileImage {
+    display: flex;
+}
+.desktopImage {
+    display: none;
+}
+
 /*SECTIONS BAR*/
 /*container*/
 .sectionsBar {
@@ -120,6 +127,13 @@
 
     .section {
         width: 31%;
+    }
+
+    .mobileImage {
+        display: none;
+    }
+    .desktopImage {
+        display: flex;
     }
 }
 

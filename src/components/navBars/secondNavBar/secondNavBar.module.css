@@ -9,6 +9,10 @@
     border-radius: 20px;
     margin-top: 20px;
     padding-inline: var(--50px);
+    transition: all ease-in-out 0.3s;
+}
+.navBarProperties:hover{
+    background-color: var(--aqua-6);
 }
 
 .navSectionsProperties{
