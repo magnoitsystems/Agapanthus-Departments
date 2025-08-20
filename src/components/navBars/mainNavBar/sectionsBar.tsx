@@ -24,18 +24,14 @@ export default function SectionsBar() {
                 <h3>Nuestro complejo</h3>
             </div>
 
-            <div
-                className={`${styles.section} ${styles.dropdown} ${isDropdownOpen ? styles.open : ''}`}
-                onClick={toggleDropdown}
-            >
-                <div className={styles.mainInfo}>
-                    <h3 onClick={() => scrollToSection('cabanas')}>Cabañas {isDropdownOpen ? '▴' : '▾'}</h3>
-                </div>
-
-                <div className={`${styles.deptos} ${isDropdownOpen ? styles.show : ''}`}>
+            <div className={styles.section}>
+                {/*<div className={styles.mainInfo}>*/}
+                    <h3 onClick={() => scrollToSection('cabanas')}>Cabañas</h3>
+                    {/*</div>*/}
+                {/*<div className={`${styles.deptos} ${isDropdownOpen ? styles.show : ''}`}>
                     <h3>AQUA - 3 personas</h3>
                     <h3>LAVANDA - 5 personas</h3>
-                </div>
+                </div>*/}
             </div>
 
             <div className={`${styles.section} ${styles.classic}`} onClick={() => scrollToSection('reservas')}>

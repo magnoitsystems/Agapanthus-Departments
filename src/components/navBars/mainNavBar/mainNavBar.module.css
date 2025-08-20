@@ -93,8 +93,8 @@
     box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.40);
 }
 
-/*dropdown button*/
-.dropdown {
+/*dropdown button NOW DESABLED*/
+/*.dropdown {
     flex-direction: column;
 
     gap: var(--15px);
@@ -116,7 +116,7 @@
     align-items: center;
 
     transition: all ease-in-out 0.3s;
-}
+}*/
 
 /*responsive for tablet*/
 @media (min-width: 768px) {
