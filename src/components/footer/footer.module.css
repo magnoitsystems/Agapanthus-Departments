@@ -19,6 +19,7 @@
 .footerWithCopyright{
     display: flex;
     flex-direction: row;
+    align-items: center;
     height: 120px;
     width: 100%;
     background-color: var(--aqua-5);
@@ -87,7 +88,8 @@
 .redirectionSideProperties{
     display: flex;
     flex-direction: row;
-    gap: var(--30px);
+    gap: var(--20px);
+    padding-inline: var(--20px);
 }
 
 @media (min-width: 786px) {
@@ -122,6 +124,8 @@
 
     .logoProperties {
         justify-content: left;
+        padding-left: var(--20px);
+        padding-top: var(--20px);
     }
 
     .footerWithCopyright {

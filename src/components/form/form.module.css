@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-inline: var(--20px);
 }
 
 .infoProperties{
@@ -20,7 +21,7 @@
 }
 
 .infoProperties span{
-    font-size: var(--40px);
+    font-size: 2.3rem;
     margin-top: 50px;
 }
 
@@ -49,7 +50,7 @@
     padding-left: 10px;
     font-size: 16px;
     border: none;
-    width: 360px;
+    width: 320px;
 }
 
 .inputProperties::placeholder{
@@ -114,5 +115,13 @@
     .formInputsProperties label{
         display: flex;
         flex-direction: column;
+    }
+
+    .infoProperties span {
+        font-size: var(--40px);
+    }
+
+    .inputProperties {
+        width: 360px;
     }
 }
