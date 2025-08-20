@@ -1,35 +1,84 @@
 .navBarProperties{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     width: 95%;
     height: 100px;
     background-color: rgba(27, 54, 45, 0.7);
     justify-self: center;
     border-radius: 20px;
     margin-top: 20px;
-    padding-inline: var(--50px);
     transition: all ease-in-out 0.3s;
+    align-items: center;
+    gap: 10px;
 }
 .navBarProperties:hover{
     background-color: var(--aqua-6);
 }
 
+.imageLogoProperties{
+    position: relative;
+    width: 230px;
+    height: 60px;
+}
+
 .navSectionsProperties{
     display: flex;
     flex-direction: row;
-    gap: 50px;
-    height: 100%;
     justify-content: center;
-    align-items: center;
+    gap: 15px;
 }
 
 .navSectionsProperties h4 {
     color: var(--neutral-1);
+    font-size: var(--15px);
     font-weight: lighter;
 }
 
-.navSectionsProperties a:hover{
+.navSectionsProperties h4:hover{
     text-underline: var(--neutral-1) 1px;
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .navBarProperties{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 95%;
+        height: 100px;
+        background-color: rgba(27, 54, 45, 0.7);
+        justify-self: center;
+        border-radius: 20px;
+        margin-top: 20px;
+        padding-inline: var(--50px);
+        transition: all ease-in-out 0.3s;
+    }
+    .navBarProperties:hover{
+        background-color: var(--aqua-6);
+    }
+
+    .imageLogoProperties{
+        position: relative;
+        width: 400px;
+        height: 100px;
+    }
+
+    .navSectionsProperties{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navSectionsProperties h4 {
+        color: var(--neutral-1);
+        font-weight: lighter;
+    }
+
+    .navSectionsProperties a:hover{
+        text-underline: var(--neutral-1) 1px;
+        cursor: pointer;
+    }
 }

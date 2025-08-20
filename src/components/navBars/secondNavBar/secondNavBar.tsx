@@ -7,8 +7,9 @@ import Link from "next/link";
 export default function secondNavBar(){
     return(
         <nav className={styles.navBarProperties}>
-            <div>
-                <Image src={"/logos/white.png"} alt={"Logo complejo"} width={418} height={100}/>
+            <div className={styles.imageLogoProperties}>
+                <Image src={"/logos/white.png"} alt={"Logo complejo"} fill
+                       className="object-cover"/>
             </div>
             <div className={styles.navSectionsProperties}>
                 <Link href="/#nuestro-complejo"><h4>Nuestro complejo</h4></Link>
