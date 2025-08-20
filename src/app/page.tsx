@@ -11,7 +11,9 @@ import ReviewsSection from "@/components/reviews/reviewsSection";
 export default function Home() {
   return (
       <div className={styles.page}>
-          <MainNavBar/>
+          <section id={'nav'}>
+              <MainNavBar/>
+          </section>
           <section id={'nuestro-complejo'}>
               <Welcome/>
           </section>
