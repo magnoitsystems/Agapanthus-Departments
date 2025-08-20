@@ -3,12 +3,36 @@
     position: fixed;
     z-index: 1000;
 
-    bottom: 60px;
-    right: 60px;
-    width: 60px;
-    height: 60px;
+    bottom: 35px;
+    right: 35px;
+    width: 35px;
+    height: 35px;
 
     background-color: transparent;
 
     cursor: pointer;
+}
+
+.desktopImage {
+    display: none;
+}
+.mobileImage {
+    display: flex;
+}
+
+
+@media (min-width: 768px) {
+    .wpButton {
+        bottom: 60px;
+        right: 60px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .desktopImage {
+        display: flex;
+    }
+    .mobileImage {
+        display: none;
+    }
 }
