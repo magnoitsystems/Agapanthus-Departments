@@ -1,5 +1,5 @@
 import styles from './leftImageCard.module.css';
-import Image from 'next/Image';
+import Image from 'next/image';
 import SeeMoreButton from "@/components/bigCards/seeMoreButton";
 import FeaturesCard from "@/components/bigCards/featuresCard";
 
