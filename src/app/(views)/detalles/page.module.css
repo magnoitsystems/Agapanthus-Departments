@@ -1,13 +1,13 @@
-/* page.module.css */
+
 .main {
   position: relative;
-  min-height: 100vh; /* que ocupe toda la pantalla */
+  min-height: 100vh; 
 }
 
 .toggleButtonContainer {
   position: fixed;
-  bottom: 20px;  /* separado un poquito del borde inferior */
+  bottom: 20px; 
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10; /* para que esté encima del carrusel */
+  z-index: 10;
 }

@@ -2,10 +2,10 @@
   position: relative;
   min-height: 100dvh;
   width: 100%;
-  padding-top: clamp(96px, 30vh, 240px);
-  padding-left: var(--h5);
-  padding-right: var(--h5);
-  padding-bottom: calc(110px + env(safe-area-inset-bottom));
+  padding-top: clamp(96px, 30vh, 240px); 
+   padding-left: var(--h5); 
+  padding-right: var(--h5); 
+   padding-bottom: calc(110px + env(safe-area-inset-bottom));
 }
 
 .contentOverlay {

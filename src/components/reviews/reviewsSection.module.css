@@ -7,10 +7,9 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* Agregamos padding horizontal al contenedor para que el resto del contenido no esté pegado a los bordes */
+  padding: 0 20px; 
 }
 
-/* Header */
 .header {
   text-align: center;
   margin-bottom: 60px;
@@ -29,7 +28,6 @@
   margin-bottom: 0;
 }
 
-/* Formulario */
 .formSection {
   display: flex;
   justify-content: center;
@@ -116,7 +114,6 @@
   font-weight: lighter;
 }
 
-/* Carrusel de reseñas */
 .reviewsCarousel {
   margin-top: 60px;
   overflow: hidden;

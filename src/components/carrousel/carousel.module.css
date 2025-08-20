@@ -1,10 +1,8 @@
 
-/* components/carousel.module.css */
-
 .bg {
     position: fixed;
     inset: 0;
-    z-index: 0; /* z-index bajo para el fondo */
+    z-index: 0; 
     overflow: hidden;
     background: #1a1a1a; 
 }
@@ -20,7 +18,7 @@
     padding: 4px 10px;
     border-radius: 9999px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    z-index: 2; /* <-- Aumentar z-index para que esté por encima de todo */
+    z-index: 2; 
     backdrop-filter: blur(2px);
     height: 38px;
     background: var(--caqui-1);
@@ -88,8 +86,8 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* gris oscuro semitransparente */
-  z-index: 1; /* arriba de la imagen, pero debajo del texto/controles */
-  pointer-events: none; /* no bloquea clicks */
+  background: rgba(0, 0, 0, 0.45); 
+  z-index: 1; 
+  pointer-events: none; 
   transition: opacity 0.3s ease;
 }
