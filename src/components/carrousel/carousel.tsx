@@ -5,7 +5,7 @@ import styles from "./carousel.module.css";
 
 type Props = {
     images?: string[];
-    autoplayMs?: number; // opcional
+    autoplayMs?: number;
 };
 
 const DEFAULT_IMAGES = [
@@ -42,7 +42,6 @@ export default function Carousel({ images = DEFAULT_IMAGES, autoplayMs = 0 }: Pr
 
     return (
         <>
-            {/* Fondo a pantalla completa */}
             <div className={styles.bg}>
                 <AnimatePresence mode="popLayout" custom={direction}>
                     <motion.img
@@ -64,7 +63,6 @@ export default function Carousel({ images = DEFAULT_IMAGES, autoplayMs = 0 }: Pr
                 </AnimatePresence>
             </div>
 
-            {/* Controles (pill con flechas + puntitos) */}
             <div className={styles.controls} role="group" aria-label="Controles del carrusel">
                 <button className={styles.chev} onClick={prev} aria-label="Anterior">‹</button>
 

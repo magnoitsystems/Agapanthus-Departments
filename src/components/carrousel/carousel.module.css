@@ -1,10 +1,10 @@
-/* Fondo a pantalla completa (detrás de todo) */
+
 .bg {
     position: fixed;
     inset: 0;
     z-index: 0;
     overflow: hidden;
-    background: #1a1a1a; /* Fondo oscuro para evitar el blanco */
+    background: #1a1a1a; 
 }
 
 .bgImg {
@@ -14,10 +14,9 @@
     height: 100%;
     object-fit: cover;
     pointer-events: none;
-    will-change: opacity, transform; /* Optimización para animaciones */
+    will-change: opacity, transform;
 }
 
-/* Controles tipo "pill" (siempre visibles) */
 .controls {
     position: fixed;
     left: 50%;
@@ -32,12 +31,11 @@
     z-index: 1;
     backdrop-filter: blur(2px);
     height: 38px;
-    background: rgba(232, 224, 200, 0.92);
+    background: var(--caqui-1);
     border: 1px solid rgba(0, 0, 0, 0.10);
-    transition: all 0.2s ease; /* Transición suave para hover */
+    transition: all 0.2s ease; 
 }
 
-/* Flechas */
 .chev {
     border: 0;
     background: transparent;
@@ -47,8 +45,8 @@
     height: 26px;
     cursor: pointer;
     border-radius: 9999px;
-    color: #5b4b2e;
-    transition: all 0.2s ease; /* Transición para hover */
+    color: var(--caqui-5);
+    transition: all 0.2s ease; 
 }
 
 .chev:hover { 
@@ -56,7 +54,6 @@
     transform: scale(1.05);
 }
 
-/* Puntitos */
 .dots { 
     display: flex; 
     align-items: center; 
@@ -70,8 +67,8 @@
     opacity: 0.8;
     border: 0;
     cursor: pointer;
-    background: #9a7a49;
-    transition: all 0.25s ease; /* Transición suave para cambios */
+    background: var(--caqui-2);
+    transition: all 0.25s ease; 
 }
 
 .dot:hover { 
@@ -80,7 +77,7 @@
 }
 
 .active { 
-    background: #2e2618;
+    background: var(--caqui-6);
     opacity: 1; 
     transform: scale(1.15);
 }
