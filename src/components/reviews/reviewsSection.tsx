@@ -79,7 +79,7 @@ export default function ReviewsSection() {
                 required
               />
               <span className={styles.inputLabel}>
-                Nombre y/o apellido (sino "Anónimo")
+                Nombre y/o apellido (sino &quot;Anónimo&quot;)
               </span>
             </div>
             
@@ -98,7 +98,7 @@ export default function ReviewsSection() {
                 required
               />
               <span className={styles.inputLabel}>
-                Contá acá tu experiencia con "Agapanthus - Cabañas Las Marias"
+                Contá acá tu experiencia con &quot;Agapanthus - Cabañas Las Marias&quot;
               </span>
             </div>
 
