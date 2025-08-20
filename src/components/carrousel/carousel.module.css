@@ -1,9 +1,9 @@
 
 /* Fondo a pantalla completa (detrás de todo) */
 .bg {
-  position: fixed;           /* ocupa toda la ventana, como background */
+    position: fixed;
   inset: 0;
-  z-index: 0;                /* el nav/otros pueden ir encima */
+  z-index: 0;                /* 🔽 más bajo que el nav */
   overflow: hidden;
 }
 .bgImg {
@@ -17,47 +17,47 @@
 
 /* Controles tipo "pill" (siempre visibles) */
 .controls {
-  position: fixed;
+ position: fixed;
   left: 50%;
-  bottom: 72px;              /* ajusta según dónde tengas el botón "Ver detalles" */
+  bottom: 72px;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 6px 12px;
+  gap: 16px;                /* 🔽 más separación flechas ↔ dots */
+  padding: 4px 10px;        /* 🔽 más delgado */
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  z-index: 1;               /* 🔽 queda debajo del nav */
+  backdrop-filter: blur(2px);
+  height: 38px;             /* 🔽 más fino */
   background:  rgba(232, 224, 200, 0.92);
   border: 1px solid rgba(0, 0, 0, 0.10);
-  border-radius: 9999px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-  z-index: 3;                /* por encima del fondo; sube/baja si tu nav lo tapa */
-  backdrop-filter: blur(2px);
 }
 
 /* Flechas */
 .chev {
-  appearance: none;
-  border: 0;
+   border: 0;
   background: transparent;
-  color: #5b4b2e;    
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   cursor: pointer;
   border-radius: 9999px;
+  color: #5b4b2e;    
 }
 .chev:hover { filter: brightness(0.9); }
 
 /* Puntitos */
 .dots { display: flex; align-items: center; gap: 10px; }
 .dot {
-  width: 11px;
-  height: 11px;
+   width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: #9a7a49; 
   opacity: 0.8;
   border: 0;
   cursor: pointer;
+  background: #9a7a49; 
 }
 .dot:hover { opacity: 1; transform: scale(1.05); }
 .active { background: #2e2618;    opacity: 1; transform: scale(1.05); }
