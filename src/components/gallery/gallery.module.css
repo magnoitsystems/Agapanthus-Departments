@@ -69,7 +69,11 @@
   font-size: var(--h3);
 }
 
-.overlay .description {
+.title {
+  opacity: 1;
+}
+
+.description {
   opacity: 0;
   transition: opacity 0.25s ease;
 }
@@ -77,6 +81,7 @@
 .item:hover .overlay .description {
   opacity: 1;
 }
+
 
 .active { opacity: 1 !important; }
 .dimmed .overlay { opacity: 0 !important; }
