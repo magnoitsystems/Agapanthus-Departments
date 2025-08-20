@@ -38,10 +38,11 @@
     padding-top: 10px;
 }
 
-.footerWithCopyright span, .redirectionSideProperties a{
+.footerWithCopyright span, .redirectionSideProperties h4{
     color: var(--neutral-6);
     font-size: var(--20px);
     font-family: Abyssinica SIL;
+    cursor: pointer;
 }
 
 .iconPhoneProperties{
@@ -55,6 +56,9 @@
 }
 
 .logoProperties{
+    position: relative;
+    width: 500px;
+    height: 150px;
     margin-top: 20px;
     padding-left: 20px;
 }
@@ -82,4 +86,37 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
+}
+
+@media (max-width: 786px) {
+    .footerWithCopyright{
+        margin-top: 21%;
+    }
+
+    .copyrightProperties{
+        padding-left: 5px;
+        white-space: none;
+    }
+
+    .logoProperties{
+        margin-top: 5%;
+        margin-left: 10%;
+        width: 300px;
+        height: 90px;
+    }
+
+    .logoMagnoProperties{
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .mainFooterProperties{
+        margin-top: 30px;
+    }
+
+    .footerWithCopyright span, .redirectionSideProperties a{
+        color: var(--neutral-6);
+        font-size: 16px;
+        font-family: Abyssinica SIL;
+    }
 }

@@ -16,7 +16,12 @@ export default function footer(){
     return(
         <footer className={styles.footerProperties}>
             <div className={styles.logoProperties}>
-                <Image src={"/logos/rectangular.png"} alt={"Logo agapanthus"} width={500} height={100}/>
+                <Image
+                    src="/logos/rectangular.png"
+                    alt="Ejemplo"
+                    fill
+                    className="object-cover"
+                />
             </div>
             <div className={styles.mainFooterProperties}>
                 <div className={styles.iconsProperties}>
