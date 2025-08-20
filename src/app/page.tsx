@@ -7,6 +7,7 @@ import RightImageCard from "@/components/bigCards/rightImageCard/rightImageCard"
 import Form from "./(views)/form/page";
 import Gallery from "@/components/gallery/gallery";
 import ReviewsSection from "@/components/reviews/reviewsSection";
+import GoogleMaps from "@/components/googleMaps/googleMaps";
 
 export default function Home() {
   return (
@@ -45,6 +46,8 @@ export default function Home() {
           <div className={styles.gallery}>
               <ReviewsSection></ReviewsSection>
           </div>
+
+          <GoogleMaps/>
 
           <Footer/>
       </div>
