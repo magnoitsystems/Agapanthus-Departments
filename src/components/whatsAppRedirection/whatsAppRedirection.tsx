@@ -11,6 +11,14 @@ export default function WhatsAppRedirection() {
                 alt={'whatsapp redirection'}
                 width={72}
                 height={66}
+                className={styles.desktopImage}
+            />
+            <Image
+                src={'/logos/wpRedirection.png'}
+                alt={'whatsapp redirection'}
+                width={54}
+                height={50}
+                className={styles.mobileImage}
             />
             </Link>
         </div>
