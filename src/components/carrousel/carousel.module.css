@@ -1,63 +1,86 @@
-
 /* Fondo a pantalla completa (detrás de todo) */
 .bg {
     position: fixed;
-  inset: 0;
-  z-index: 0;                /* 🔽 más bajo que el nav */
-  overflow: hidden;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    background: #1a1a1a; /* Fondo oscuro para evitar el blanco */
 }
+
 .bgImg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;         /* ocupa todo sin deformar */
-  pointer-events: none;      /* no bloquea clicks de overlays */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    will-change: opacity, transform; /* Optimización para animaciones */
 }
 
 /* Controles tipo "pill" (siempre visibles) */
 .controls {
- position: fixed;
-  left: 50%;
-  bottom: 72px;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 16px;                /* 🔽 más separación flechas ↔ dots */
-  padding: 4px 10px;        /* 🔽 más delgado */
-  border-radius: 9999px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-  z-index: 1;               /* 🔽 queda debajo del nav */
-  backdrop-filter: blur(2px);
-  height: 38px;             /* 🔽 más fino */
-  background:  rgba(232, 224, 200, 0.92);
-  border: 1px solid rgba(0, 0, 0, 0.10);
+    position: fixed;
+    left: 50%;
+    bottom: 72px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    height: 38px;
+    background: rgba(232, 224, 200, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    transition: all 0.2s ease; /* Transición suave para hover */
 }
 
 /* Flechas */
 .chev {
-   border: 0;
-  background: transparent;
-  font-size: 18px;
-  line-height: 1;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  border-radius: 9999px;
-  color: #5b4b2e;    
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+    line-height: 1;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    border-radius: 9999px;
+    color: #5b4b2e;
+    transition: all 0.2s ease; /* Transición para hover */
 }
-.chev:hover { filter: brightness(0.9); }
+
+.chev:hover { 
+    filter: brightness(0.9);
+    transform: scale(1.05);
+}
 
 /* Puntitos */
-.dots { display: flex; align-items: center; gap: 10px; }
-.dot {
-   width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  opacity: 0.8;
-  border: 0;
-  cursor: pointer;
-  background: #9a7a49; 
+.dots { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
 }
-.dot:hover { opacity: 1; transform: scale(1.05); }
-.active { background: #2e2618;    opacity: 1; transform: scale(1.05); }
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    opacity: 0.8;
+    border: 0;
+    cursor: pointer;
+    background: #9a7a49;
+    transition: all 0.25s ease; /* Transición suave para cambios */
+}
+
+.dot:hover { 
+    opacity: 1; 
+    transform: scale(1.15); 
+}
+
+.active { 
+    background: #2e2618;
+    opacity: 1; 
+    transform: scale(1.15);
+}
