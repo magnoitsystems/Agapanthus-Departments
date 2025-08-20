@@ -1,7 +1,10 @@
+'use client'
+
 import styles from './rightImageCard.module.css';
 import Image from 'next/image';
 import SeeMoreButton from "@/components/bigCards/seeMoreButton";
 import FeaturesCard from "@/components/bigCards/featuresCard";
+import { motion } from "framer-motion";
 
 type Props = {
     image: string;
@@ -14,16 +17,30 @@ type Props = {
 export default function RightImageCard({image, name, cantGuests, description, forbidden} : Props) {
     return (
         <main className={styles.main}>
-            <div className={styles.topImage}>
+            {/* Imagen superior - entra desde la derecha */}
+            <motion.div
+                className={styles.topImage}
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
                 <Image
                     src={image}
                     alt={"imagen principal del departamento"}
                     fill
                     style={{objectFit: "cover"}}
                 />
-            </div>
+            </motion.div>
 
-            <div className={styles.info}>
+            {/* Info - entra desde la izquierda */}
+            <motion.div
+                className={styles.info}
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+            >
                 <div>
                     <h1>{name}</h1>
                     <h2>Departamento apto {cantGuests} personas</h2>
@@ -35,16 +52,23 @@ export default function RightImageCard({image, name, cantGuests, description, fo
                 <SeeMoreButton
                     personalizedClassName={'light'}
                 />
-            </div>
+            </motion.div>
 
-            <div className={styles.bottomImage}>
+            {/* Imagen inferior - entra desde la derecha */}
+            <motion.div
+                className={styles.bottomImage}
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+            >
                 <Image
                     src={image}
                     alt={"imagen principal del departamento"}
                     fill
                     style={{objectFit: "cover"}}
                 />
-            </div>
+            </motion.div>
         </main>
     );
 }
