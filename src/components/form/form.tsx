@@ -17,7 +17,7 @@ export default function form(){
                     </div>
                 </div>
                 <div className={styles.buttonProperties}>
-                    <button>Enviar consulta</button>
+                    <button type="submit">Enviar consulta</button>
                 </div>
             </form>
         </div>
