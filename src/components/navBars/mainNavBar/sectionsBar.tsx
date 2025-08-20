@@ -6,13 +6,21 @@ import styles from "@/components/navBars/mainNavBar/mainNavBar.module.css";
 export default function SectionsBar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+    const scrollToSection = (id: string) => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
     return (
         <main className={styles.sectionsBar}>
-            <div className={`${styles.section} ${styles.classic}`}>
+            <div className={`${styles.section} ${styles.classic}`} onClick={() => scrollToSection('nuestro-complejo')}>
                 <h3>Nuestro complejo</h3>
             </div>
 
@@ -21,7 +29,7 @@ export default function SectionsBar() {
                 onClick={toggleDropdown}
             >
                 <div className={styles.mainInfo}>
-                    <h3>Cabañas {isDropdownOpen ? '▴' : '▾'}</h3>
+                    <h3 onClick={() => scrollToSection('cabanas')}>Cabañas {isDropdownOpen ? '▴' : '▾'}</h3>
                 </div>
 
                 <div className={`${styles.deptos} ${isDropdownOpen ? styles.show : ''}`}>
@@ -30,7 +38,7 @@ export default function SectionsBar() {
                 </div>
             </div>
 
-            <div className={`${styles.section} ${styles.classic}`}>
+            <div className={`${styles.section} ${styles.classic}`} onClick={() => scrollToSection('reservas')}>
                 <h3>Reservas</h3>
             </div>
         </main>

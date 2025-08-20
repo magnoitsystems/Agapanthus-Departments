@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "./ReviewsSection.module.css";
+import styles from "./reviewsSection.module.css";
 import { abyssinica } from "@/app/ui/fonts";
 
 interface Review {
@@ -79,7 +79,7 @@ export default function ReviewsSection() {
                 required
               />
               <span className={styles.inputLabel}>
-                Nombre y/o apellido (sino "Anónimo")
+                Nombre y/o apellido (sino &quot;Anónimo&quot;)
               </span>
             </div>
             
@@ -98,7 +98,7 @@ export default function ReviewsSection() {
                 required
               />
               <span className={styles.inputLabel}>
-                Contá acá tu experiencia con "Agapanthus - Cabañas Las Marias"
+                Contá acá tu experiencia con &quot;Agapanthus - Cabañas Las Marias&quot;
               </span>
             </div>
 

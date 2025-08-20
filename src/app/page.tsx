@@ -10,35 +10,43 @@ import ReviewsSection from "@/components/reviews/reviewsSection";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-        <MainNavBar/>
-        <Welcome/>
-        <div className={styles.gallery}>
+      <div className={styles.page}>
+          <section id={'nav'}>
+              <MainNavBar/>
+          </section>
+          <section id={'nuestro-complejo'}>
+              <Welcome/>
+          </section>
+          <div className={styles.gallery}>
               <Gallery></Gallery>
-        </div>
+          </div>
 
-        <div className={styles.deptos}>
-            <LeftImageCard
-                image={'/testImages/interactiveGallery/prue.png'}
-                name={'Aqua'}
-                cantGuests={5}
-                description={'Departamento luminoso y moderno, ideal para parejas o familias. Cuenta con cocina equipada, baño privado y vista al cerro. Ubicado en zona tranquila, a minutos del centro.'}
-                forbidden={'No se permite fumar dentro de los departamentos. No se alquila a grupos de jóvenes solos. No se permiten fiestas ni reuniones. Se solicita respeto por el descanso de los vecinos y cuidado del mobiliario.'}
-            />
-            <RightImageCard
-                image={'/testImages/interactiveGallery/prue.png'}
-                name={'Lavanda'}
-                cantGuests={5}
-                description={'Departamento luminoso y moderno, ideal para parejas o familias. Cuenta con cocina equipada, baño privado y vista al cerro. Ubicado en zona tranquila, a minutos del centro.'}
-                forbidden={'No se permite fumar dentro de los departamentos. No se alquila a grupos de jóvenes solos. No se permiten fiestas ni reuniones. Se solicita respeto por el descanso de los vecinos y cuidado del mobiliario.'}
-            />
-        </div>
+          <div className={styles.deptos} id={'cabanas'}>
+              <LeftImageCard
+                  image={'/testImages/interactiveGallery/prue.png'}
+                  name={'Aqua'}
+                  cantGuests={5}
+                  description={'Departamento luminoso y moderno, ideal para parejas o familias. Cuenta con cocina equipada, baño privado y vista al cerro. Ubicado en zona tranquila, a minutos del centro.'}
+                  forbidden={'No se permite fumar dentro de los departamentos. No se alquila a grupos de jóvenes solos. No se permiten fiestas ni reuniones. Se solicita respeto por el descanso de los vecinos y cuidado del mobiliario.'}
+              />
+              <RightImageCard
+                  image={'/testImages/interactiveGallery/prue.png'}
+                  name={'Lavanda'}
+                  cantGuests={5}
+                  description={'Departamento luminoso y moderno, ideal para parejas o familias. Cuenta con cocina equipada, baño privado y vista al cerro. Ubicado en zona tranquila, a minutos del centro.'}
+                  forbidden={'No se permite fumar dentro de los departamentos. No se alquila a grupos de jóvenes solos. No se permiten fiestas ni reuniones. Se solicita respeto por el descanso de los vecinos y cuidado del mobiliario.'}
+              />
+          </div>
 
-        <Form />
-        <div className={styles.gallery}>
-          <ReviewsSection></ReviewsSection>
-        </div>
-        <Footer />
-    </div>
+          <div id={'reservas'}>
+              <Form/>
+          </div>
+
+          <div className={styles.gallery}>
+              <ReviewsSection></ReviewsSection>
+          </div>
+
+          <Footer/>
+      </div>
   );
 }

@@ -9,8 +9,13 @@
 
 .mainFooterProperties{
     display: flex;
-    flex-direction: row;
-    gap: 80px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: var(--20px);
 }
 
 .footerWithCopyright{
@@ -62,6 +67,10 @@
     align-items: center;
     padding-top: 120px;
     gap: 10px;
+}
+.redirectionSideProperties h4 {
+    font-weight: lighter;
+    color: var(--neutral-6);
 }
 
 .iconsProperties{
