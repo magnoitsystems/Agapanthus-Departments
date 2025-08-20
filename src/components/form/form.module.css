@@ -11,7 +11,7 @@
 .infoProperties{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     text-align: center;
     justify-self: center;
 }
