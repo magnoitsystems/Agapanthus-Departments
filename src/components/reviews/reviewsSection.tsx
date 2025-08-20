@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "./ReviewsSection.module.css";
+import styles from "./reviewsSection.module.css";
 import { abyssinica } from "@/app/ui/fonts";
 
 interface Review {
