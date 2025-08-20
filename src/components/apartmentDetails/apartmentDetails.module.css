@@ -1,0 +1,65 @@
+/* components/ApartmentDetails.module.css */
+
+.container {
+  color: white;
+  padding: 2.5rem 1.5rem; /* Ajuste para móviles */
+  text-align: center;
+  font-family: sans-serif;
+  background-color: transparent;
+}
+
+.title {
+  font-size: 2rem; /* Tamaño para móviles */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description {
+  max-width: 60rem;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gridItem {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.gridItem p {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 2.5rem;
+  }
+
+  .title {
+    font-size: 3rem; /* Tamaño para desktop */
+  }
+
+  .description {
+    font-size: 1.25rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .gridItem p {
+    font-size: 1rem;
+  }
+}

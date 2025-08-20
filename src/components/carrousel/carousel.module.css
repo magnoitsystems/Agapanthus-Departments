@@ -1,20 +1,12 @@
 
+/* components/carousel.module.css */
+
 .bg {
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: 0; /* z-index bajo para el fondo */
     overflow: hidden;
     background: #1a1a1a; 
-}
-
-.bgImg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-    will-change: opacity, transform;
 }
 
 .controls {
@@ -28,13 +20,24 @@
     padding: 4px 10px;
     border-radius: 9999px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    z-index: 1;
+    z-index: 2; /* <-- Aumentar z-index para que esté por encima de todo */
     backdrop-filter: blur(2px);
     height: 38px;
     background: var(--caqui-1);
     border: 1px solid rgba(0, 0, 0, 0.10);
     transition: all 0.2s ease; 
 }
+
+.bgImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    will-change: opacity, transform;
+}
+
 
 .chev {
     border: 0;

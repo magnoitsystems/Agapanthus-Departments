@@ -1,3 +1,5 @@
+// components/carousel.tsx
+
 "use client";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -6,6 +8,7 @@ import styles from "./carousel.module.css";
 type Props = {
     images?: string[];
     autoplayMs?: number;
+    showControls?: boolean; // Nueva prop
 };
 
 const DEFAULT_IMAGES = [
@@ -18,7 +21,7 @@ const DEFAULT_IMAGES = [
     "/testImages/interactiveGallery/item7.jpg",
 ];
 
-export default function Carousel({ images = DEFAULT_IMAGES, autoplayMs = 0 }: Props) {
+export default function Carousel({ images = DEFAULT_IMAGES, autoplayMs = 0, showControls = true }: Props) {
     const [index, setIndex] = useState(0);
     const [direction, setDirection] = useState<1 | -1>(1);
 
@@ -63,23 +66,24 @@ export default function Carousel({ images = DEFAULT_IMAGES, autoplayMs = 0 }: Pr
                 </AnimatePresence>
             </div>
 
-            <div className={styles.controls} role="group" aria-label="Controles del carrusel">
-                <button className={styles.chev} onClick={prev} aria-label="Anterior">‹</button>
-
-                <div className={styles.dots} role="tablist" aria-label="Paginación">
-                    {images.map((_, i) => (
-                        <button
-                            key={i}
-                            className={`${styles.dot} ${i === index ? styles.active : ""}`}
-                            onClick={() => { setDirection(i > index ? 1 : -1); setIndex(i); }}
-                            aria-label={`Ir a la imagen ${i + 1}`}
-                            aria-current={i === index ? "true" : undefined}
-                        />
-                    ))}
+            {/* Solo se renderizan los controles si showControls es true */}
+            {showControls && (
+                <div className={styles.controls} role="group" aria-label="Controles del carrusel">
+                    <button className={styles.chev} onClick={prev} aria-label="Anterior">‹</button>
+                    <div className={styles.dots} role="tablist" aria-label="Paginación">
+                        {images.map((_, i) => (
+                            <button
+                                key={i}
+                                className={`${styles.dot} ${i === index ? styles.active : ""}`}
+                                onClick={() => { setDirection(i > index ? 1 : -1); setIndex(i); }}
+                                aria-label={`Ir a la imagen ${i + 1}`}
+                                aria-current={i === index ? "true" : undefined}
+                            />
+                        ))}
+                    </div>
+                    <button className={styles.chev} onClick={next} aria-label="Siguiente">›</button>
                 </div>
-
-                <button className={styles.chev} onClick={next} aria-label="Siguiente">›</button>
-            </div>
+            )}
         </>
     );
 }
