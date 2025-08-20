@@ -72,7 +72,7 @@ export default function LeftImageCard({ image, name, cantGuests, description, fo
                     {forbidden}
                 </motion.h5>
 
-                <SeeMoreButton personalizedClassName={'dark'} />
+                <SeeMoreButton personalizedClassName={'dark'} cardId={1} />
             </motion.div>
         </motion.main>
     );

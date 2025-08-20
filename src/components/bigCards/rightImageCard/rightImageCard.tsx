@@ -51,6 +51,7 @@ export default function RightImageCard({image, name, cantGuests, description, fo
 
                 <SeeMoreButton
                     personalizedClassName={'light'}
+                    cardId={2}
                 />
             </motion.div>
 
