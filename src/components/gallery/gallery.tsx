@@ -7,7 +7,7 @@ const images: GalleryImage[] = [
   {
     src: "testImages/interactiveGallery/item4.webp",
     title: "Ubicación privilegiada",
-    description: "A solo minutos de los principales atractivos turísticos.",
+    description: "Cercano a los principales atractivos turísticos.",
     highlight: true,
     size: "large", 
   },
@@ -36,7 +36,7 @@ const images: GalleryImage[] = [
   {
     src: "testImages/interactiveGallery/item5.jpg",
     title: "Estadía Pet-Friendly",
-    description: "Ofrecemos estadía pet-friendly para que disfrutes Tandil junto a tu mascota.",
+    description: "Estadía pet-friendly para que disfrutes Tandil junto a tu mascota.",
     highlight: true,
     size: "large", 
   },
