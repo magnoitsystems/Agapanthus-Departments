@@ -19,8 +19,16 @@ export default function footer(){
                 <Image
                     src="/logos/rectangular.png"
                     alt="Ejemplo"
-                    fill
-                    className="object-cover"
+                    width={493}
+                    height={100}
+                    className={styles.desktopImg}
+                />
+                <Image
+                    src="/logos/rectangular.png"
+                    alt="Ejemplo"
+                    width={345}
+                    height={70}
+                    className={styles.mobileImg}
                 />
             </div>
             <div className={styles.mainFooterProperties}>

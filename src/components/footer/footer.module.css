@@ -23,19 +23,13 @@
     width: 100%;
     background-color: var(--aqua-5);
     margin-top: 51px;
+    padding-inline: var(--20px);
 }
 
 .copyrightProperties{
     display: flex;
     flex-direction: row;
-    padding-left: 38%;
     white-space: none;
-    padding-top: 70px;
-}
-
-.logoMagnoProperties{
-    padding-left: 30%;
-    padding-top: 10px;
 }
 
 .footerWithCopyright span, .redirectionSideProperties h4{
@@ -56,11 +50,19 @@
 }
 
 .logoProperties{
-    position: relative;
-    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 150px;
-    margin-top: 20px;
-    padding-left: 20px;
+}
+
+.mobileImg {
+    display: flex;
+}
+.desktopImg {
+    display: none;
 }
 
 .redirectionsProperties{
@@ -79,44 +81,55 @@
 .iconsProperties{
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: var(--40px);
 }
 
 .redirectionSideProperties{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: var(--30px);
 }
 
-@media (max-width: 786px) {
-    .footerWithCopyright{
-        margin-top: 21%;
-    }
+@media (min-width: 786px) {
 
-    .copyrightProperties{
-        padding-left: 5px;
+    .copyrightProperties {
+        padding-left: var(--5px);
         white-space: none;
     }
 
-    .logoProperties{
-        margin-top: 5%;
-        margin-left: 10%;
-        width: 300px;
-        height: 90px;
-    }
-
-    .logoMagnoProperties{
+    .logoMagnoProperties {
         padding-left: 0;
-        padding-top: 10px;
+        padding-top: var(--10px);
     }
 
-    .mainFooterProperties{
-        margin-top: 30px;
+    .mainFooterProperties {
+        margin-top: var(--30px);
     }
 
-    .footerWithCopyright span, .redirectionSideProperties a{
+    .footerWithCopyright span, .redirectionSideProperties a {
         color: var(--neutral-6);
-        font-size: 16px;
+        font-size: var(--h5);
         font-family: Abyssinica SIL;
     }
+
+    .mobileImg {
+        display: none;
+    }
+
+    .desktopImg {
+        display: flex;
+    }
+
+    .logoProperties {
+        justify-content: left;
+    }
+
+    .footerWithCopyright {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: var(--30px);
+        height: fit-content;
+    }
 }
+
