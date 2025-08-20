@@ -55,16 +55,14 @@ export default function ReviewsSection() {
 
   return (
     <section className={styles.reviewsSection}>
-      {/* El contenido del header y el formulario permanece dentro del contenedor para centrarlo */}
       <div className={styles.container}>
-        {/* Título principal */}
         <div className={styles.header}>
-          <h2 className={`${styles.title} ${abyssinica.className}`}>
+          <h1 className={`${styles.title} ${abyssinica.className}`}>
             Si nos conocés dejanos un comentario sobre tu experiencia.
-          </h2>
-          <h3 className={`${styles.subtitle} ${abyssinica.className}`}>
+          </h1>
+          <h1 className={`${styles.subtitle} ${abyssinica.className}`}>
             Y si no, ¡Te invitamos a conocernos!
-          </h3>
+          </h1>
         </div>
 
         <div className={styles.formSection}>
@@ -103,7 +101,7 @@ export default function ReviewsSection() {
             </div>
 
             <button type="submit" className={`${styles.submitButton} ${abyssinica.className}`}>
-              Enviar Reseña
+              <h4>Enviar reseña</h4>
             </button>
           </form>
         </div>
