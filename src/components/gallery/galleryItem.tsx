@@ -38,7 +38,7 @@ export default function GalleryItem({
       <img src={img.src} alt={img.title || "gallery"} />
       {img.highlight && (
         <div className={`${styles.overlay} ${isActive ? styles.active : ""}`}>
-          <h3 className={`${abyssinica.className}`}>{img.title}</h3>
+          <h1 className={`${abyssinica.className}`}>{img.title}</h1>
           {isActive && img.description && <p>{img.description}</p>}
         </div>
       )}

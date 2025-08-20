@@ -61,11 +61,17 @@
   transition: opacity 0.25s ease;
   padding: 16px;
 }
+.overlay h3 {
+  font-weight: lighter;
+}
+.overlay p {
+  font-weight: lighter;
+  font-size: var(--h3);
+}
 
-.title { 
-  font-size: var(--30px);
+.title {
   margin-bottom: 0;
-  font-weight: 600;
+  font-weight: lighter;
   line-height: 1.2;
 }
 

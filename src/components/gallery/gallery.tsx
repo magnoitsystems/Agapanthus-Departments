@@ -28,7 +28,7 @@ const images: GalleryImage[] = [
   },
   {
     src: "testImages/interactiveGallery/item7.jpg",
-    title: "Confort garantizado",
+    title: "Comfort garantizado",
     description: "Departamentos totalmente equipados para tu comodidad.",
     highlight: true,
     size: "horizontal", 
