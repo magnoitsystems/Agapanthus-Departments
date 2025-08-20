@@ -1,4 +1,3 @@
-// ApartmentDetails.tsx
 import React from 'react';
 import styles from './apartmentDetails.module.css';
 

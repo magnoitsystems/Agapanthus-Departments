@@ -84,3 +84,12 @@
     opacity: 1; 
     transform: scale(1.15);
 }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* gris oscuro semitransparente */
+  z-index: 1; /* arriba de la imagen, pero debajo del texto/controles */
+  pointer-events: none; /* no bloquea clicks */
+  transition: opacity 0.3s ease;
+}

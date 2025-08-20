@@ -30,7 +30,7 @@
 }
 
 .gridItem {
-  background-color: rgba(4, 216, 124, 0.232);
+  background-color: rgba(154, 154, 154, 0.555);
   backdrop-filter: blur(4px);
   padding: 1rem;
   border-radius: 0.5rem;

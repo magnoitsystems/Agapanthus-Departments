@@ -14,7 +14,6 @@ const ApartmentView = () => {
     const searchParams = useSearchParams();
     const id = searchParams.get("id");
 
-    // Según el id, elegimos data
     const details = id === "2" ? lavanda : aqua;
     const images = id === "2" ? lavandaImages : aquaImages;
     const title = id === "2" ? "Cabaña Lavanda" : "Cabaña Aqua";
@@ -23,16 +22,19 @@ const ApartmentView = () => {
 
     return (
         <div className={styles.mainContainer}>
-            <Carousel images={images} showControls={!isDetailsView} />
+            // ApartmentView.tsx
+
+            <Carousel images={images} showControls={!isDetailsView} dimmed={isDetailsView} />
+
 
             <div className={styles.contentOverlay}>
                 {isDetailsView && <ApartmentDetails title={title} details={details} />}
             </div>
 
             <div className={styles.buttonContainer}>
-                <ToggleButton 
-                    isDetailsView={isDetailsView} 
-                    onClick={toggleView} 
+                <ToggleButton
+                    isDetailsView={isDetailsView}
+                    onClick={toggleView}
                 />
             </div>
         </div>
