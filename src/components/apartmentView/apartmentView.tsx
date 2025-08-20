@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import styles from './ApartmentView.module.css';
+import styles from './apartmentView.module.css';
 import Carousel from '../carrousel/carousel';
 import ApartmentDetails from '../apartmentDetails/apartmentDetails';
 import ToggleButton from '../seeMoreButton/toggleButton';
