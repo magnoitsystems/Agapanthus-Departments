@@ -1,21 +1,23 @@
+
 .toggleButton {
   background: transparent;
-  color: var(--neutral-1); /* Blanco por defecto */
+  color: var(--neutral-1);
   border: none;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.125rem; 
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px; 
   position: relative;
-  padding: 10px 15px;
+  padding: 14px 20px;
   transition: all 0.3s ease;
   z-index: 10;
+  min-height: 48px;
+  min-width: 48px;
 }
 
-/* Línea debajo */
 .toggleButton::after {
   content: '';
   position: absolute;
@@ -24,28 +26,100 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: var(--neutral-1); /* Blanco por defecto */
+  background-color: var(--neutral-1);
   transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .toggleButton:hover {
-  color: var(--aqua-5); /* Texto e ícono en aqua */
+  color: var(--aqua-5);
 }
 
 .toggleButton:hover::after {
   width: 100%;
-  background-color: var(--aqua-5); /* Línea en aqua */
+  background-color: var(--aqua-5);
 }
 
 .buttonText {
   white-space: nowrap;
+  font-size: 1rem;
 }
 
 .arrowIcon {
-  fill: currentColor; /* Hereda el color del texto */
+  fill: currentColor;
   transition: transform 0.3s ease;
+  width: 16px; 
+  height: 16px;
+  flex-shrink: 0; 
 }
 
 .toggleButton:hover .arrowIcon {
   transform: translateY(2px);
+}
+
+@media (min-width: 768px) {
+  .toggleButton {
+    font-size: 1.25rem; 
+    gap: 8px;
+    padding: 12px 18px; 
+    min-height: auto; 
+  }
+  
+  .buttonText {
+    font-size: 1.125rem; 
+  }
+  
+  .arrowIcon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .toggleButton {
+    font-size: 1.25rem; 
+    gap: 10px;
+    padding: 10px 15px;
+  }
+  
+  .buttonText {
+    font-size: 1.25rem; 
+  }
+  
+  .arrowIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .toggleButton {
+    font-size: 1.375rem; 
+    gap: 12px;
+    padding: 12px 18px;
+  }
+  
+  .buttonText {
+    font-size: 1.375rem;
+  }
+  
+  .arrowIcon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .toggleButton:active {
+    color: var(--aqua-5);
+    transform: scale(0.98);
+  }
+  
+  .toggleButton:active::after {
+    width: 100%;
+    background-color: var(--aqua-5);
+  }
+  
+  .toggleButton:active .arrowIcon {
+    transform: translateY(2px);
+  }
 }
