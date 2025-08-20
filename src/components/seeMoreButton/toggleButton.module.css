@@ -1,23 +1,21 @@
-/* Este es el archivo CSS para el componente ToggleButton */
 .toggleButton {
-  /* Estilos base del botón */
   background: transparent;
-  color: white; /* El color de la fuente por defecto es blanco */
+  color: var(--neutral-1); /* Blanco por defecto */
   border: none;
   cursor: pointer;
-  font-size: 1.25rem; /* Ajusta el tamaño de la fuente */
+  font-size: 1.25rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* Espacio entre el texto y el ícono */
-  position: relative; /* Necesario para el pseudo-elemento de la línea */
-  padding: 10px 15px; /* Agregamos un poco de padding para el área de clic */
+  gap: 8px;
+  position: relative;
+  padding: 10px 15px;
   transition: all 0.3s ease;
   z-index: 10;
 }
 
-/* Efecto de línea blanca en hover */
+/* Línea debajo */
 .toggleButton::after {
   content: '';
   position: absolute;
@@ -26,25 +24,28 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: white;
-  transition: width 0.3s ease-in-out;
+  background-color: var(--neutral-1); /* Blanco por defecto */
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.toggleButton:hover {
+  color: var(--aqua-5); /* Texto e ícono en aqua */
 }
 
 .toggleButton:hover::after {
   width: 100%;
+  background-color: var(--aqua-5); /* Línea en aqua */
 }
 
-/* Estilos para el texto y el ícono */
 .buttonText {
-  white-space: nowrap; /* Evita que el texto se parta en varias líneas */
+  white-space: nowrap;
 }
 
 .arrowIcon {
-  fill: currentColor; /* Asegura que el ícono herede el color del texto (blanco) */
+  fill: currentColor; /* Hereda el color del texto */
   transition: transform 0.3s ease;
 }
 
-/* Puedes añadir un efecto de movimiento sutil al ícono si quieres */
 .toggleButton:hover .arrowIcon {
   transform: translateY(2px);
 }
