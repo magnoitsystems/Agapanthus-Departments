@@ -2,14 +2,14 @@
 
 .container {
   color: white;
-  padding: 2.5rem 1.5rem; /* Ajuste para móviles */
+  padding: 2.5rem 1.5rem; 
   text-align: center;
   font-family: sans-serif;
   background-color: transparent;
 }
 
 .title {
-  font-size: 2rem; /* Tamaño para móviles */
+  font-size: 2rem; 
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -30,7 +30,7 @@
 }
 
 .gridItem {
-  background-color: rgba(4, 216, 124, 0.396);
+  background-color: rgba(4, 216, 124, 0.232);
   backdrop-filter: blur(4px);
   padding: 1rem;
   border-radius: 0.5rem;
@@ -47,7 +47,7 @@
   }
 
   .title {
-    font-size: 3rem; /* Tamaño para desktop */
+    font-size: 3rem; 
   }
 
   .description {
