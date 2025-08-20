@@ -17,14 +17,14 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: var(--40px);
   color: var(--aqua-6);
-  margin-bottom: 16px;
+  margin-bottom: var(--15px);
   line-height: 1.3;
 }
 
 .subtitle {
-  font-size: 1.8rem;
+  font-size: var(--30px);
   color: var(--aqua-6);
   margin-bottom: 0;
 }
@@ -39,7 +39,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: var(--25px);
   max-width: 600px;
   width: 100%;
 }
@@ -51,15 +51,15 @@
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--8px);
 }
 
 .input {
-  padding: 20px;
+  padding: var(--20px);
   border: none;
   border-radius: 12px;
   background: var(--caqui-5);
-  font-size: 1rem;
+  font-size: var(--h5);
   color: var(--aqua-5);
   transition: all 0.3s ease;
 }
@@ -74,7 +74,7 @@
   background: var(--caqui-4);
   opacity: 0.9;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(165, 160, 123, 0.2);
+  box-shadow: 0 var(--8px) var(--25px) var(--input-shadow);
 }
 
 .nameInput {
@@ -96,11 +96,11 @@
 }
 
 .submitButton {
-  padding: 12px 30px;
+  padding: 12px var(--30px);
   background: var(--aqua-4);
   color: var(--caqui-1);
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: var(--h5);
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: center;
@@ -129,7 +129,7 @@
 
 .scrollingContent {
   display: flex;
-  gap: 20px;
+  gap: var(--20px);
   animation: scroll 30s linear infinite;
   width: fit-content;
 }
@@ -145,11 +145,11 @@
 
 .reviewCard {
   min-width: 320px;
-  padding: 30px;
+  padding: var(--30px);
   background: linear-gradient(135deg, var(--aqua-2), var(--aqua-4));
   border-radius: 16px;
   color: white;
-  box-shadow: 0 8px 30px rgba(116, 185, 199, 0.3);
+  box-shadow: 0 var(--8px) var(--30px) var(--review-shadow);
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
@@ -187,7 +187,7 @@
   }
 
   .subtitle {
-    font-size: 1.5rem;
+    font-size: var(--h2);
   }
 
   .form {
@@ -196,7 +196,7 @@
   
   .reviewCard {
     min-width: 280px;
-    padding: 24px;
+    padding: var(--25px);
   }
   
   .scrollingContent {
@@ -206,11 +206,11 @@
 
 @media (max-width: 480px) {
   .reviewsSection {
-    padding: 60px 15px;
+    padding: 60px var(--15px);
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: var(--30px);
   }
 
   .subtitle {
@@ -219,6 +219,6 @@
   
   .reviewCard {
     min-width: 250px;
-    padding: 20px;
+    padding: var(--20px);
   }
 }
