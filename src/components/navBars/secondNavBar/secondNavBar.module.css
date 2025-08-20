@@ -9,6 +9,8 @@
     margin-top: 20px;
     align-items: center;
     gap: 10px;
+    position: absolute;
+    z-index: 10;
 }
 
 .imageLogoProperties{
