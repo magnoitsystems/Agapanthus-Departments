@@ -17,7 +17,7 @@ export default function MainNavBar() {
             <Image
                 src={"/logos/white.png"}
                 alt={"logo rectangular de Agapanthus - Cabañas Las Marias"}
-                width={204}
+                width={334}
                 height={80}
                 className={styles.mobileImage}
             />
