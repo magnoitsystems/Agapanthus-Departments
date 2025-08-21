@@ -37,13 +37,13 @@ export default function SectionsBar() {
                 </motion.h3>
             </div>
 
-            <div className={styles.section}>
+            <div className={styles.section}
+                 onClick={() => scrollToSection('cabanas')}>
                 <motion.h3
                     variants={textVariants}
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    onClick={() => scrollToSection('cabanas')}
                 >
                     Cabañas
                 </motion.h3>
