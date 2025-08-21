@@ -4,6 +4,11 @@ import { CreateOpinionRequest, OpinionResponse } from "@/lib/types";
 
 const prisma = new PrismaClient();
 
+function getErrorMessage(error: unknown): string {
+  if (error instanceof Error) return error.message;
+  return String(error);
+}
+
 export async function GET(): Promise<NextResponse<OpinionResponse>> {
   try {
     const opiniones = await prisma.opinion.findMany({
@@ -14,9 +19,9 @@ export async function GET(): Promise<NextResponse<OpinionResponse>> {
       success: true,
       data: opiniones,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json(
-      { success: false, error: error.message },
+      { success: false, error: getErrorMessage(error) },
       { status: 500 }
     );
   }
@@ -44,9 +49,9 @@ export async function POST(req: Request): Promise<NextResponse<OpinionResponse>>
       success: true,
       data: nuevaOpinion,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     return NextResponse.json(
-      { success: false, error: error.message },
+      { success: false, error: getErrorMessage(error) },
       { status: 500 }
     );
   }
