@@ -48,7 +48,6 @@
   margin: 0;
 }
 
-/* 💻 Tablet */
 @media (min-width: 768px) {
   .container {
     padding: 7rem 2rem 3rem;
