@@ -2,53 +2,21 @@
 import { useState } from "react";
 import styles from "./reviewsSection.module.css";
 import { abyssinica } from "@/app/ui/fonts";
-
-interface Review {
-  id: number;
-  name: string;
-  text: string;
-}
-
-const reviews: Review[] = [
-  {
-    id: 1,
-    name: "Agostina Bidegain",
-    text: "Hermosa estadía. Fui con mis familia y nos quedamos enamorados de Tandil!"
-  },
-  {
-    id: 2,
-    name: "Martín González",
-    text: "Excelente ubicación y comodidad. Los departamentos están muy bien equipados."
-  },
-  {
-    id: 3,
-    name: "Laura Fernández",
-    text: "Perfecto para descansar en familia. El trato fue excepcional y volveremos pronto."
-  },
-  {
-    id: 4,
-    name: "Carlos Rodríguez",
-    text: "Muy cómodo y limpio. La atención al cliente es de primera calidad."
-  },
-  {
-    id: 5,
-    name: "Ana María López",
-    text: "Una experiencia increíble. Tandil es hermoso y el lugar perfecto para hospedarse."
-  },
-  {
-    id: 6,
-    name: "Diego Morales",
-    text: "Recomendado 100%. Las instalaciones son excelentes y la ubicación privilegiada."
-  }
-];
+import { useOpiniones } from "@/hooks/useOpinions";
 
 export default function ReviewsSection() {
   const [name, setName] = useState("");
   const [experience, setExperience] = useState("");
+  const { opiniones, createOpinion } = useOpiniones();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Nueva reseña:", { name, experience });
+
+    await createOpinion({
+      autor: name || "Anónimo",
+      contenido: experience,
+    });
+
     setName("");
     setExperience("");
   };
@@ -74,7 +42,6 @@ export default function ReviewsSection() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className={`${styles.input} ${styles.nameInput}`}
-                required
               />
               <span className={styles.inputLabel}>
                 Nombre y/o apellido (sino &quot;Anónimo&quot;)
@@ -88,8 +55,8 @@ export default function ReviewsSection() {
                 onChange={(e) => {
                   setExperience(e.target.value);
                   const target = e.target as HTMLTextAreaElement;
-                  target.style.height = 'auto';
-                  target.style.height = target.scrollHeight + 'px';
+                  target.style.height = "auto";
+                  target.style.height = target.scrollHeight + "px";
                 }}
                 className={`${styles.input} ${styles.experienceInput}`}
                 rows={2}
@@ -107,17 +74,17 @@ export default function ReviewsSection() {
         </div>
       </div>
       
-      {/* El carrusel se mueve fuera del contenedor para que ocupe el 100% del ancho */}
+      {/* Carrusel dinámico con opiniones de DB */}
       <div className={styles.reviewsCarousel}>
         <div className={styles.scrollingWrapper}>
           <div className={styles.scrollingContent}>
-            {[...reviews, ...reviews].map((review, index) => (
+            {[...opiniones, ...opiniones].map((review, index) => (
               <div key={`${review.id}-${index}`} className={styles.reviewCard}>
                 <h4 className={`${styles.reviewName} ${abyssinica.className}`}>
-                  {review.name}
+                  {review.autor}
                 </h4>
                 <p className={`${styles.reviewText} ${abyssinica.className}`}>
-                  {review.text}
+                  {review.contenido}
                 </p>
               </div>
             ))}
