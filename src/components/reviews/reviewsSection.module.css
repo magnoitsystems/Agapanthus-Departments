@@ -58,7 +58,7 @@
   border-radius: 12px;
   background: var(--caqui-5);
   font-size: var(--h5);
-  color: var(--aqua-5);
+  color: var(--aqua-2);
   transition: all 0.3s ease;
 }
 
@@ -115,28 +115,35 @@
 }
 
 .reviewsCarousel {
-  margin-top: 60px;
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .scrollingWrapper {
-  overflow: hidden;
+  display: flex;
+  width: 100%;
 }
 
 .scrollingContent {
   display: flex;
   gap: var(--20px);
-  animation: scroll 30s linear infinite;
-  width: fit-content;
+  width: max-content;
+  animation: marquee 17s linear infinite;
 }
 
-@keyframes scroll {
+.scrollingContent::after {
+  content: '';
+  display: block;
+  width: 100%;
+}
+
+@keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -177,7 +184,7 @@
   color: var(--aqua-6);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .title {
     font-size: 2rem;

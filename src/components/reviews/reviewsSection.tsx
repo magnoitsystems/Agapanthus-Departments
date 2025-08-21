@@ -74,23 +74,24 @@ export default function ReviewsSection() {
         </div>
       </div>
       
-      {/* Carrusel dinámico con opiniones de DB */}
-      <div className={styles.reviewsCarousel}>
-        <div className={styles.scrollingWrapper}>
-          <div className={styles.scrollingContent}>
-            {[...opiniones, ...opiniones].map((review, index) => (
-              <div key={`${review.id}-${index}`} className={styles.reviewCard}>
-                <h4 className={`${styles.reviewName} ${abyssinica.className}`}>
-                  {review.autor}
-                </h4>
-                <p className={`${styles.reviewText} ${abyssinica.className}`}>
-                  {review.contenido}
-                </p>
-              </div>
-            ))}
-          </div>
+     <div className={styles.reviewsCarousel}>
+  <div className={styles.scrollingWrapper}>
+    <div className={styles.scrollingContent}>
+      {opiniones.map((review) => (
+        <div key={review.id} className={styles.reviewCard}>
+          <h4 className={`${styles.reviewName} ${abyssinica.className}`}>
+            {review.autor}
+          </h4>
+          <p className={`${styles.reviewText} ${abyssinica.className}`}>
+            {review.contenido}
+          </p>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
     </section>
   );
 }
