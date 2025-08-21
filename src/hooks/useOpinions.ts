@@ -3,6 +3,11 @@ import { Opinion } from "@/generated/prisma";
 import { CreateOpinionRequest, OpinionResponse } from "@/lib/types";
 import { useEffect, useState } from "react";
 
+ function getErrorMessage(error: unknown): string {
+        if (error instanceof Error) return error.message;
+        return String(error);
+    }
+
 export function useOpiniones() {
     const [opiniones, setOpiniones] = useState<Opinion[]>([]);
     const [loading, setLoading] = useState(false);
@@ -19,8 +24,8 @@ export function useOpiniones() {
             } else {
                 setError(data.error || "Error al obtener opiniones");
             }
-        } catch (err: any) {
-            setError(err.message);
+        } catch (error: unknown) {
+            setError(getErrorMessage(error));
         } finally {
             setLoading(false);
         }
@@ -43,8 +48,8 @@ export function useOpiniones() {
             else {
                 setError(data.error || "Error al crear opinión");
             }
-        } catch (err: any) {
-            setError(err.message);
+        } catch (error: unknown) {
+            setError(getErrorMessage(error));
         } finally {
             setLoading(false);
         }
@@ -53,6 +58,7 @@ export function useOpiniones() {
     useEffect(() => {
         fetchOpiniones();
     }, []);
+
 
     return { opiniones, loading, error, fetchOpiniones, createOpinion };
 }
