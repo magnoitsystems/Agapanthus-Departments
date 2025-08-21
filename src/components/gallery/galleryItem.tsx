@@ -1,5 +1,5 @@
 import styles from "./gallery.module.css";
-import {abyssinica} from "@/app/ui/fonts";
+import { abyssinica } from "@/app/ui/fonts";
 
 export type ImageSize = "square" | "horizontal" | "vertical" | "large";
 
@@ -29,17 +29,21 @@ export default function GalleryItem({
 
   return (
     <div
-      className={`${styles.item} ${styles[img.size || "square"]} ${
-        isDimmed ? styles.dimmed : ""
-      }`}
+      className={`${styles.item} ${styles[img.size || "square"]} ${isDimmed ? styles.dimmed : ""
+        }`}
       onMouseEnter={() => setActiveIndex(index)}
       onMouseLeave={() => setActiveIndex(null)}
     >
       <img src={img.src} alt={img.title || "gallery"} />
       {img.highlight && (
         <div className={`${styles.overlay} ${isActive ? styles.active : ""}`}>
-          <h1 className={`${abyssinica.className} ${styles.title} ${styles.description}`}>{img.title}</h1>
-          {isActive && img.description && <p>{img.description}</p>}
+          <h1 className={`${abyssinica.className} ${styles.title}`}>
+            {img.title}
+          </h1>
+          {isActive && img.description && (
+            <p className={styles.description}>{img.description}</p>
+          )}
+
         </div>
       )}
     </div>

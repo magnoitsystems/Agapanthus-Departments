@@ -5,7 +5,7 @@ import {abyssinica} from "@/app/ui/fonts";
 import WhatsAppRedirection from "@/components/whatsAppRedirection/whatsAppRedirection";
 
 export const metadata: Metadata = {
-  title: "Agapanthus",
+  title: "Agapanthus Cabañas",
   description: "Created by Magno",
 };
 

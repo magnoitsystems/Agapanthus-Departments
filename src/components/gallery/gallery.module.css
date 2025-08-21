@@ -74,6 +74,10 @@
   transition: opacity 0.25s ease;
 }
 
+.title{
+  opacity: 1;
+}
+
 .item:hover .overlay .description {
   opacity: 1;
 }

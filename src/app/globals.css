@@ -9,7 +9,11 @@
   --aqua-4: #487E6C;
   --aqua-5: #31594C;
   --aqua-6: #1B362D;
+
   --aqua-overlay:  rgba(20, 98, 86, 0.8);
+  --grey-overlay: rgba(154, 154, 154, 0.55);
+  --input-shadow: rgba(165, 160, 123, 0.2);
+  --review-shadow: rgba(116, 185, 199, 0.3);
 
   --caqui-1: #F7EDCF;
   --caqui-2: #D5C58A;
