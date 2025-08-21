@@ -9,7 +9,7 @@ import ToggleButton from '../seeMoreButton/toggleButton';
 import { aqua, lavanda, aquaImages, lavandaImages } from "../apartmentDetails/apartmentsData";
 
 const ApartmentView = () => {
-  const [isDetailsView, setIsDetailsView] = useState(true);
+  const [isDetailsView, setIsDetailsView] = useState(false); // Cambiado de true a false
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
 
@@ -21,7 +21,6 @@ const ApartmentView = () => {
 
   return (
     <div className={styles.mainContainer}>
-      {/* ApartmentView */}
       <Carousel images={images} showControls={!isDetailsView} dimmed={isDetailsView} />
 
       <div className={styles.contentOverlay}>
