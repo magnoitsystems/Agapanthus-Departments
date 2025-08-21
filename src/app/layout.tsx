@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {abyssinica} from "@/app/ui/fonts";
 import WhatsAppRedirection from "@/components/whatsAppRedirection/whatsAppRedirection";
@@ -7,6 +6,28 @@ import WhatsAppRedirection from "@/components/whatsAppRedirection/whatsAppRedire
 export const metadata: Metadata = {
   title: "Agapanthus Cabañas",
   description: "Created by Magno",
+  icons: {
+    icon: [
+      {
+        url: "/logos/rounded_logo.png",
+        sizes: "48x48",
+        type: "image/png",
+      },
+      {
+        url: "/logos/rounded_logo.png", 
+        sizes: "16x16",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/logos/rounded_logo.png",
+    apple: [
+      {
+        url: "/logos/rounded_logo.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
