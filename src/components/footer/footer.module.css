@@ -101,11 +101,6 @@
 
     .logoMagnoProperties {
         padding-left: 0;
-        padding-top: var(--10px);
-    }
-
-    .mainFooterProperties {
-        margin-top: var(--30px);
     }
 
     .footerWithCopyright span, .redirectionSideProperties a {
@@ -132,7 +127,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-top: var(--30px);
         height: fit-content;
     }
 }
