@@ -105,6 +105,12 @@
   width: 100%;
 }
 
+
+.activeButton {
+  background-color: var(--neutral-6);
+  color: var(--caqui-2);
+}
+
 .submitButton:hover {
   transform: translateY(-3px);
   background: var(--aqua-5);
