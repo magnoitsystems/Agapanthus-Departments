@@ -13,7 +13,7 @@ export default function ReviewsSection() {
 
   const [showAlert, setShowAlert] = useState(false);
   const [buttonText, setButtonText] = useState("Enviar reseña");
-  const [buttonActive, setButtonActive] = useState(false); // <-- nuevo estado
+  const [buttonActive, setButtonActive] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,22 +27,22 @@ export default function ReviewsSection() {
       setName("");
       setExperience("");
 
-      // cambia texto y color
       setButtonText("Reseña enviada exitosamente");
       setButtonActive(true);
 
-      // restaurar después de 3s
       setTimeout(() => {
         setButtonText("Enviar reseña");
         setButtonActive(false);
       }, 3000);
 
       setShowAlert(true);
-
     } catch (error) {
       console.error("Error al crear la opinión:", error);
     }
   };
+
+  const baseDuration = 17;
+  const animationDuration = opiniones.length > 0 ? baseDuration * (opiniones.length / 3) : baseDuration;
 
   return (
       <section className={styles.reviewsSection}>
@@ -102,7 +102,10 @@ export default function ReviewsSection() {
 
         <div className={styles.reviewsCarousel}>
           <div className={styles.scrollingWrapper}>
-            <div className={styles.scrollingContent}>
+            <div
+                className={styles.scrollingContent}
+                style={{ animationDuration: `${animationDuration}s` }}
+            >
               {opiniones.map((review) => (
                   <div key={review.id} className={styles.reviewCard}>
                     <h4 className={`${styles.reviewName} ${abyssinica.className}`}>

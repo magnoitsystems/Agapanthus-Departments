@@ -135,7 +135,7 @@
   display: flex;
   gap: var(--20px);
   width: max-content;
-  animation: marquee 17s linear infinite;
+  animation: marquee linear infinite;
 }
 
 .scrollingContent::after {
