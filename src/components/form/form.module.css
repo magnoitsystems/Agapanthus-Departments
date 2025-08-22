@@ -6,7 +6,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: var(--50px);
     padding-inline: var(--20px);
+    gap: var(--30px);
 }
 
 .infoProperties{
@@ -15,6 +17,7 @@
     width: 100%;
     text-align: center;
     justify-self: center;
+    gap: var(--20px);
 }
 
 .infoProperties p, .formProperties label, .buttonProperties button {
@@ -23,19 +26,18 @@
 
 .infoProperties span{
     font-size: 2.3rem;
-    margin-top: 50px;
 }
 
 .formInputsProperties{
     display: flex;
     flex-direction: column;
-    width: min-content;
+    width: 100%;
     height: fit-content;
     justify-self: center;
     margin-top: 60px;
 }
 
-.formInputsProperties, .datesInputsProperties{
+.datesInputsProperties{
     gap: 30px;
 }
 
@@ -70,19 +72,28 @@
     height: 40px;
     border-radius: 100px;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
-.buttonProperties {
+
+
+.lastFormRow {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+
+    width: 100%;
+
+    gap: var(--50px);
 }
 
-@media (min-width: 786px) {
-    .formSectionProperties{
-        height: fit-content;
+
+@media (min-width: 1024px) {
+    .lastFormRow {
+        flex-direction: row;
+        align-items: end;
+
+        gap: 0;
     }
 
     .infoProperties{
@@ -94,19 +105,13 @@
     }
 
     .formProperties, .infoProperties{
-        margin-left: 80px;
+        margin-inline: var(--50px);
     }
 
     .datesInputsProperties{
         display: flex;
         flex-direction: row;
         gap: 60px;
-    }
-
-    .buttonProperties{
-        margin-left: 80%;
-        margin-top: 0;
-        margin-bottom: 0;
     }
 
     .formInputsProperties{
@@ -125,4 +130,5 @@
     .inputProperties {
         width: 360px;
     }
+
 }

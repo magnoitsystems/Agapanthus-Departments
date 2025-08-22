@@ -106,6 +106,12 @@
   width: 100%;
 }
 
+
+.activeButton {
+  background-color: var(--neutral-6);
+  color: var(--caqui-2);
+}
+
 .submitButton:hover {
   transform: translateY(-3px);
   background: var(--aqua-5);
@@ -130,7 +136,7 @@
   display: flex;
   gap: var(--20px);
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marquee linear infinite;
 }
 
 .scrollingContent::after {
