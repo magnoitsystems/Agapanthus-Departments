@@ -1,10 +1,11 @@
+/* Mobile First - Base styles (320px+) */
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--10px);
   margin: 0 var(--20px);
   grid-auto-flow: dense;
-  grid-auto-rows: 140px; 
+  grid-auto-rows: 150px;
 }
 
 .item {
@@ -32,19 +33,19 @@
   grid-row: span 1;
 }
 
-.horizontal {             
-  grid-column: span 2;
+.horizontal {
+  grid-column: span 1; 
+  grid-row: span 1; 
+}
+
+.vertical {
+  grid-column: span 1;
   grid-row: span 1;
 }
 
-.vertical {               
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-.large {                  
-  grid-column: span 2;
-  grid-row: span 2;
+.large {
+  grid-column: span 1; 
+  grid-row: span 1; 
 }
 
 .overlay {
@@ -61,77 +62,111 @@
   transition: opacity 0.25s ease;
   padding: 16px;
 }
+
 .overlay h3 {
   font-weight: lighter;
 }
+
 .overlay p {
   font-weight: lighter;
   font-size: var(--h3);
 }
 
 .overlay .description {
-  opacity: 0;
+  font-size: medium;
+  opacity: 1 !important;
   transition: opacity 0.25s ease;
 }
 
-.title{
+.title {
   opacity: 1;
+}
+
+.overlay:hover .title {
+  display: none;
+}
+
+.overlay:hover .description {
+  font-size: small;
+  opacity: 1 !important;
 }
 
 .item:hover .overlay .description {
   opacity: 1;
 }
 
-.active { opacity: 1 !important; }
-.dimmed .overlay { opacity: 0 !important; }
+.active { 
+  opacity: 1 !important; 
+}
 
-/* Responsive to see well the gallery in every screen */
-@media (max-width: 1200px) {
+.dimmed .overlay { 
+  opacity: 0 !important; 
+}
+
+/* Small Mobile (481px+) */
+@media (min-width: 481px) {
   .grid { 
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 130px;
+    grid-auto-rows: 140px;
   }
 }
 
-@media (max-width: 1024px) { 
+/* Tablet Portrait (641px+) */
+@media (min-width: 641px) {
+  .grid { 
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 110px;
+  }
+
+  .horizontal {             
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .vertical {               
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .large {                  
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .overlay .description {
+    opacity: 0;
+    font-size: var(--h3);
+  }
+
+  .overlay:hover .title {
+    display: block;
+  }
+
+  .overlay:hover .description {
+    font-size: var(--h3);
+    opacity: 1;
+  }
+}
+
+/* Tablet Landscape (769px+) */
+@media (min-width: 769px) {
   .grid { 
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 120px;
   }
 }
 
-@media (max-width: 768px) {
+/* Desktop Small (1025px+) */
+@media (min-width: 1025px) {
   .grid { 
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 110px;
-  }
-  .large {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 130px;
   }
 }
 
-@media (max-width: 640px) {
+/* Desktop Large (1201px+) */
+@media (min-width: 1201px) {
   .grid { 
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 150px;
-  }
-  .horizontal, .vertical, .large { 
-    grid-column: span 1; 
-    grid-row: span 1; 
-  }
-
-  .overlay:hover .title {
-    display: none;
-  }
-
-  .description {
-    font-size: medium;
-    opacity: 1 !important;
-  }
-
-  .overlay:hover .description{
-    font-size: small;
-    opacity: 1 !important;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 140px;
   }
 }
