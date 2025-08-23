@@ -31,10 +31,12 @@
 .formInputsProperties{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: fit-content;
-    justify-self: center;
-    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: min-content;
+    margin-top: var(--50px);
+    gap: var(--15px);
 }
 
 .datesInputsProperties{
@@ -43,7 +45,7 @@
 
 .formProperties label, .infoProperties, .buttonProperties button{
     color: var(--neutral-1);
-    font-family: "Abyssinica SIL";
+    font-family: "Abyssinica SIL", serif;
 }
 
 .inputProperties{
@@ -74,17 +76,19 @@
     cursor: pointer;
 }
 
-
-
 .lastFormRow {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     width: 100%;
-
     gap: var(--50px);
+}
+
+.formProperties{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
 }
 
 
@@ -92,8 +96,7 @@
     .lastFormRow {
         flex-direction: row;
         align-items: end;
-
-        gap: 0;
+        gap: var(--50px);
     }
 
     .infoProperties{
@@ -108,6 +111,10 @@
         margin-inline: var(--50px);
     }
 
+    .formProperties{
+        justify-self: left;
+    }
+
     .datesInputsProperties{
         display: flex;
         flex-direction: row;
@@ -116,6 +123,8 @@
 
     .formInputsProperties{
         justify-self: left;
+        align-items: start;
+        align-content: start;
     }
 
     .formInputsProperties label{
@@ -130,5 +139,4 @@
     .inputProperties {
         width: 360px;
     }
-
 }
