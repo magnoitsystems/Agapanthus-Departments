@@ -17,17 +17,17 @@ export default function footer(){
         <footer className={styles.footerProperties}>
             <div className={styles.logoProperties}>
                 <Image
-                    src="/logos/rectangular.png"
+                    src="/logos/redondo.svg"
                     alt="Ejemplo"
-                    width={493}
-                    height={100}
+                    width={200}
+                    height={200}
                     className={styles.desktopImg}
                 />
                 <Image
-                    src="/logos/rectangular.png"
+                    src="/logos/redondo.svg"
                     alt="Ejemplo"
-                    width={345}
-                    height={70}
+                    width={200}
+                    height={200}
                     className={styles.mobileImg}
                 />
             </div>

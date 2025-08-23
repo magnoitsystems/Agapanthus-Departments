@@ -26,9 +26,9 @@ export default function ToggleButton({ isDetailsView, onClick }: Props) {
     return (
         <button className={`${styles.toggleButton} ${abyssinica.className}`} onClick={onClick}>
             <span className={styles.buttonText}>
-                {isDetailsView ? "Ver detalles" : "Ver imágenes"}
+                {isDetailsView ? "Ver imágenes" : "Ver detalles"}
             </span>
-            {isDetailsView ? <ArrowDown /> : <ArrowUp />}
+            {isDetailsView ? <ArrowUp /> : <ArrowDown />}
         </button>
     );
 }
