@@ -140,7 +140,7 @@ export default function Form() {
                 >
                     {isSubmitting ? 'Enviando...' : 'Enviar consula'}
                 </motion.button>
-                  {!isSubmitting && (
+                  {isSubmitting && (
                       <SuccessAlert
                           message1={message}
                       />
