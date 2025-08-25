@@ -23,7 +23,7 @@
     height: 120px;
     width: 100%;
     background-color: var(--aqua-5);
-    padding: var(--20px);
+    padding-top: var(--15px);
 }
 
 .copyrightProperties{
@@ -71,7 +71,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 120px;
     gap: 10px;
 }
 .redirectionSideProperties h4 {

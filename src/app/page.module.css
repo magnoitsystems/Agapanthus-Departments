@@ -16,3 +16,12 @@
 .gallery{
   margin-bottom: var(--50px) ;
 }
+
+.emailProperties{
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  height: max-content;
+  background-color: #3B3623;
+  border-radius: 20px;
+}

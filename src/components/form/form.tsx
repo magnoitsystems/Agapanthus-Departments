@@ -1,15 +1,57 @@
 "use client";
-import { useState } from "react";
+import {FormEvent, useState} from "react";
 import { motion } from "framer-motion";
 import styles from "./form.module.css";
 import SuccessAlert from "@/components/successAlert/successAlert";
 
 export default function Form() {
-    const [showAlert, setShowAlert] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [formData, setFormData] = useState({
+        nameAndLastname: '',
+        tel: '',
+        cant: '',
+        date1: '',
+        date2: ''
+    });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [message, setMessage] = useState('');
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmitForm = async (e: FormEvent) => {
         e.preventDefault();
-        setShowAlert(true);
+        setIsSubmitting(true);
+        setMessage('');
+
+        try {
+            const response = await fetch("/api/reserve", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setMessage('¡Reserva enviada con éxito! Nos pondremos en contacto pronto.');
+                setFormData({ nameAndLastname: '', tel: '', cant: '', date1: '', date2: '' });
+            } else {
+                setMessage(`Error al enviar: ${result.error || 'Inténtelo de nuevo más tarde.'}`);
+            }
+        } catch (Error) {
+            setMessage('Ocurrió un error de red. Por favor, revise su conexión.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -22,37 +64,56 @@ export default function Form() {
           </p>
         </div>
 
-        <form className={styles.formProperties} onSubmit={handleSubmit}>
+        <form className={styles.formProperties} onSubmit={handleSubmitForm}>
           <div className={styles.formInputsProperties}>
-            <label>
-              Nombre y apellido
-              <input
-                className={styles.inputProperties}
-                type="text"
-                name="nameAndLastname"
-                placeholder={"Nombre y apellido"}
-                required
-              />
-            </label>
-            <label>
+              <label>
+                  Nombre y apellido
+                  <input
+                      className={styles.inputProperties}
+                      type="text"
+                      name="nameAndLastname"
+                      id="nameAndLastname"
+                      placeholder={"Nombre y apellido"}
+                      required
+                      value={formData.nameAndLastname}
+                      onChange={handleChange}
+                  />
+              </label>
+              <label htmlFor={"tel"}>
+                  Número de teléfono
+                  <input
+                      className={styles.inputProperties}
+                      type="text"
+                      id="tel"
+                      name="tel"
+                      placeholder={"Número de telefono"}
+                      required
+                      value={formData.tel}
+                      onChange={handleChange}
+                  />
+              </label>
+              <label htmlFor={"cant"}>
               Cantidad de huespedes
               <input
                 className={styles.inputProperties}
-                type="number"
-                name="guests"
+                type="text"
+                id="cant"
+                name="cant"
                 placeholder={"Cantidad de huespedes"}
+                value={formData.cant}
                 required
+                onChange={handleChange}
               />
             </label>
             <div className={styles.lastFormRow}>
               <div className={styles.datesInputsProperties}>
-                <label>
+                <label htmlFor={"date1"}>
                   Fecha de ingreso (estimada)
-                  <input type="date" className={styles.inputProperties} />
+                  <input type="date" className={styles.inputProperties} name="date1" value={formData.date1} onChange={handleChange} />
                 </label>
-                <label>
+                <label htmlFor={"date2"}>
                   Fecha de salida (estimada)
-                  <input type="date" className={styles.inputProperties} />
+                  <input type="date" className={styles.inputProperties} name="date2" value={formData.date2} onChange={handleChange} />
                 </label>
               </div>
 
@@ -68,22 +129,17 @@ export default function Form() {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
+                  disabled={isSubmitting}
                 >
-                  Enviar consulta
+                    {isSubmitting ? 'Enviando...' : 'Enviar consula'}
                 </motion.button>
+                  <SuccessAlert
+                      message1={message}
+                  />
               </div>
             </div>
           </div>
         </form>
-
-        {showAlert && (
-          <SuccessAlert
-            message1="¡Gracias por contactarnos!"
-            message2="Esperamos verte pronto en nuestro complejo :)"
-            submessage="¡Mientras esperas una respuesta te invitamos a seguirnos en nuestras redes!"
-            onClose={() => setShowAlert(false)}
-          />
-        )}
       </div>
     );
 }
