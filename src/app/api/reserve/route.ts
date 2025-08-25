@@ -12,7 +12,7 @@ export async function POST(request: Request) {
 
             from: 'onboarding@resend.dev',
 
-            to: ['magno.itsystem@gmail.com'],
+            to: ['magno.itsystems@gmail.com'],
 
             subject: `Consulta de reserva de ${name}`,
             html: `
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'Error al enviar el correo.' }, { status: 500 });
         }
 
-        return NextResponse.json({ message: '¡Correo enviado con éxito!', data });
+        return NextResponse.json({ ok: true , message: '¡Correo enviado con éxito!', data });
 
     } catch (error) {
         console.error(error);

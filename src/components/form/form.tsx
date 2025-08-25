@@ -6,13 +6,20 @@ import SuccessAlert from "@/components/successAlert/successAlert";
 
 export default function Form() {
 
+    const [show, setShow] = useState(false);
+
     const [formData, setFormData] = useState({
-        nameAndLastname: '',
+        name: '',
         tel: '',
         cant: '',
         date1: '',
         date2: ''
     });
+
+    const changeState = (e: React.FormEvent) =>{
+        e.preventDefault();
+        setShow(true);
+    }
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [message, setMessage] = useState('');
@@ -41,9 +48,9 @@ export default function Form() {
 
             const result = await response.json();
 
-            if (response.ok) {
+            if (result.ok) {
                 setMessage('¡Reserva enviada con éxito! Nos pondremos en contacto pronto.');
-                setFormData({ nameAndLastname: '', tel: '', cant: '', date1: '', date2: '' });
+                setFormData({ name: '', tel: '', cant: '', date1: '', date2: '' });
             } else {
                 setMessage(`Error al enviar: ${result.error || 'Inténtelo de nuevo más tarde.'}`);
             }
@@ -71,11 +78,11 @@ export default function Form() {
                   <input
                       className={styles.inputProperties}
                       type="text"
-                      name="nameAndLastname"
-                      id="nameAndLastname"
+                      name="name"
+                      id="name"
                       placeholder={"Nombre y apellido"}
                       required
-                      value={formData.nameAndLastname}
+                      value={formData.name}
                       onChange={handleChange}
                   />
               </label>
@@ -133,9 +140,11 @@ export default function Form() {
                 >
                     {isSubmitting ? 'Enviando...' : 'Enviar consula'}
                 </motion.button>
-                  <SuccessAlert
-                      message1={message}
-                  />
+                  {!isSubmitting && (
+                      <SuccessAlert
+                          message1={message}
+                      />
+                  )}
               </div>
             </div>
           </div>
