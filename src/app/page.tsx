@@ -8,6 +8,7 @@ import Form from "./(views)/form/page";
 import Gallery from "@/components/gallery/gallery";
 import ReviewsSection from "@/components/reviews/reviewsSection";
 import GoogleMaps from "@/components/googleMaps/googleMaps";
+import GroupFeatureCards from "@/components/featureCard/groupFeatureCards";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
           </section>
           <section id={'nuestro-complejo'}>
               <Welcome/>
+
+              <GroupFeatureCards/>
           </section>
           <div className={styles.gallery}>
               <Gallery></Gallery>
