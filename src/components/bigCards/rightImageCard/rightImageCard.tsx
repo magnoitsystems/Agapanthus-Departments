@@ -12,12 +12,13 @@ type Props = {
     cantGuests: number;
     description: string;
     forbidden: string;
+    bath: number;
+    dorm: number;
 }
 
-export default function RightImageCard({image, name, cantGuests, description, forbidden} : Props) {
+export default function RightImageCard({image, name, cantGuests, description, forbidden, bath, dorm} : Props) {
     return (
         <main className={styles.main}>
-            {/* Imagen superior - entra desde la derecha */}
             <motion.div
                 className={styles.topImage}
                 initial={{ opacity: 0, x: 100 }}
@@ -33,7 +34,6 @@ export default function RightImageCard({image, name, cantGuests, description, fo
                 />
             </motion.div>
 
-            {/* Info - entra desde la izquierda */}
             <motion.div
                 className={styles.info}
                 initial={{ opacity: 0, x: -100 }}
@@ -43,10 +43,10 @@ export default function RightImageCard({image, name, cantGuests, description, fo
             >
                 <div>
                     <h1>{name}</h1>
-                    <h2>Departamento apto {cantGuests} personas</h2>
+                    <h2>Departamento hasta {cantGuests} personas</h2>
                 </div>
                 <h5>{description}</h5>
-                <FeaturesCard bathrooms={5} dorms={3}/>
+                <FeaturesCard bathrooms={bath} dorms={dorm}/>
                 <h5>{forbidden}</h5>
 
                 <SeeMoreButton
@@ -55,7 +55,6 @@ export default function RightImageCard({image, name, cantGuests, description, fo
                 />
             </motion.div>
 
-            {/* Imagen inferior - entra desde la derecha */}
             <motion.div
                 className={styles.bottomImage}
                 initial={{ opacity: 0, x: 100 }}

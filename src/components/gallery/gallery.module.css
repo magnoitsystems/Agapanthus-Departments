@@ -63,7 +63,7 @@
   padding: 16px;
 }
 
-.overlay h3 {
+.overlay h3, .overlay h1 {
   font-weight: lighter;
 }
 

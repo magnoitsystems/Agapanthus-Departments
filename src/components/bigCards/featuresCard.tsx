@@ -26,7 +26,7 @@ export default function FeaturesCard({bathrooms, dorms}: Props) {
                     width={20}
                     height={20}
                 />
-                <h6>Baños</h6>
+                <h6>{bathrooms} Baños</h6>
             </div>
 
             <div className={styles.feature}>
@@ -36,7 +36,7 @@ export default function FeaturesCard({bathrooms, dorms}: Props) {
                     width={20}
                     height={20}
                 />
-                <h6>Dormitorios</h6>
+                <h6>{dorms} Dormitorios</h6>
             </div>
 
             <div className={styles.feature}>
@@ -46,7 +46,7 @@ export default function FeaturesCard({bathrooms, dorms}: Props) {
                     width={20}
                     height={20}
                 />
-                <h6>Ropa blanca</h6>
+                <h6>Ropa de cama</h6>
             </div>
         </main>
     )

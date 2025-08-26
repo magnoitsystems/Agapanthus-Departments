@@ -12,9 +12,11 @@ type Props = {
     cantGuests: number;
     description: string;
     forbidden: string;
+    bath: number;
+    dorm: number;
 }
 
-export default function LeftImageCard({ image, name, cantGuests, description, forbidden }: Props) {
+export default function LeftImageCard({ image, name, cantGuests, description, forbidden, bath, dorm }: Props) {
     return (
         <motion.main
             className={styles.main}
@@ -51,7 +53,7 @@ export default function LeftImageCard({ image, name, cantGuests, description, fo
                     transition={{ duration: 0.6, delay: 0.3 }}
                 >
                     <h1>{name}</h1>
-                    <h2>Departamento apto {cantGuests} personas</h2>
+                    <h2>Departamento hasta {cantGuests} personas</h2>
                 </motion.div>
 
                 <motion.h5
@@ -62,7 +64,7 @@ export default function LeftImageCard({ image, name, cantGuests, description, fo
                     {description}
                 </motion.h5>
 
-                <FeaturesCard bathrooms={5} dorms={3} />
+                <FeaturesCard bathrooms={bath} dorms={dorm} />
 
                 <motion.h5
                     initial={{ y: 20, opacity: 0 }}

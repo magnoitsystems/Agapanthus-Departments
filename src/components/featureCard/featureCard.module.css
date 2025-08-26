@@ -1,0 +1,60 @@
+/*individual card (featureCard.tsx)*/
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    max-width: 400px;
+    min-height: 530px;
+
+
+    gap: 4rem;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: var(--20px);
+
+    text-align: center;
+}
+
+.details h2, .details h3 {
+    margin: 0;
+    padding: 0;
+
+    font-weight: lighter;
+}
+
+.list {
+    list-style: none;
+}
+
+/*group of feature cards (groupFeatureCards.tsx)*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+
+        gap: 5rem;
+    }
+}
