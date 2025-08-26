@@ -7,7 +7,7 @@ const images: GalleryImage[] = [
   {
     src: "testImages/interactiveGallery/item4.webp",
     title: "Ubicación privilegiada",
-    description: "Cercano a los principales atractivos turísticos.",
+    description: "Zona tranquila y libre de ruidos molestos, ideal para descansar.",
     highlight: true,
     size: "large", 
   },
@@ -28,15 +28,15 @@ const images: GalleryImage[] = [
   },
   {
     src: "testImages/interactiveGallery/item7.jpg",
-    title: "Comfort garantizado",
-    description: "Departamentos totalmente equipados para tu comodidad.",
+    title: "Parking",
+    description: "Estacionamiento propio y sin costo adicional.",
     highlight: true,
     size: "horizontal", 
   },
   {
     src: "testImages/interactiveGallery/item5.jpg",
     title: "Estadía Pet-Friendly",
-    description: "Estadía pet-friendly para que disfrutes Tandil junto a tu mascota.",
+    description: "Estadía pet-friendly para que disfrutes de Tandil junto a tu mascota.",
     highlight: true,
     size: "large", 
   },

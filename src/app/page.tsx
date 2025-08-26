@@ -29,16 +29,29 @@ export default function Home() {
               <LeftImageCard
                   image={'/testImages/interactiveGallery/prue.png'}
                   name={'Aqua'}
-                  cantGuests={5}
-                  description={'Departamento luminoso y moderno, ideal para parejas o familias. Cuenta con cocina equipada, baño privado y vista al cerro. Ubicado en zona tranquila, a minutos del centro.'}
-                  forbidden={'No se permite fumar dentro de los departamentos. No se alquila a grupos de jóvenes solos. No se permiten fiestas ni reuniones. Se solicita respeto por el descanso de los vecinos y cuidado del mobiliario.'}
+                  cantGuests={6}
+                  description={'Cabaña moderna y luminosa con 2 habitaciones, una de ellas en suite.' +
+                      ' Living con sofá cama, TV de pantalla plana, aire acondicionado y cocina ' +
+                      'totalmente equipada con microondas, tostadora, pava eléctrica y demás.' +
+                      ' Contiene además parrilla exterior.'
+                  }
+                  forbidden={'No se permite fumar dentro de los departamentos. ' +
+                      'Se solicita respeto por el descanso de los vecinos y cuidado del mobiliario.'}
+                  bath={2}
+                  dorm={2}
               />
               <RightImageCard
                   image={'/testImages/interactiveGallery/prue.png'}
                   name={'Lavanda'}
-                  cantGuests={5}
-                  description={'Departamento luminoso y moderno, ideal para parejas o familias. Cuenta con cocina equipada, baño privado y vista al cerro. Ubicado en zona tranquila, a minutos del centro.'}
-                  forbidden={'No se permite fumar dentro de los departamentos. No se alquila a grupos de jóvenes solos. No se permiten fiestas ni reuniones. Se solicita respeto por el descanso de los vecinos y cuidado del mobiliario.'}
+                  cantGuests={4}
+                  description={'Cabaña moderna y luminosa con habitación en suite.' +
+                      ' Living con sofá cama, TV de pantalla plana, aire acondicionado y cocina ' +
+                      'totalmente equipada con microondas, tostadora, pava eléctrica y demás.' +
+                      ' Contiene además parrilla exterior.'}
+                  forbidden={'No se permite fumar dentro de los departamentos. ' +
+                      'Se solicita respeto por el descanso de los vecinos y cuidado del mobiliario.'}
+                  bath={2}
+                  dorm={1}
               />
           </div>
 
