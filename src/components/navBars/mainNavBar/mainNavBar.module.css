@@ -2,31 +2,62 @@
 .main {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    position: relative; 
     width: 100vw;
-    height: 100vh; /* 700px */
+    height: 100vh;
+    overflow: hidden;
+}
 
-    background-image: url("/testImages/navBarBackground.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/*VIDEO BACKGROUND STYLES*/
+.backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; 
+}
+
+.mobileVideo {
+    display: block;
+}
+
+.desktopVideo {
+    display: none;
+}
+
+.videoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.1)
+    );
+    z-index: -1; 
 }
 
 /*NAV BAR*/
 .nav {
+    position: absolute; 
+    top: 0; 
+    left: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-
     width: 100%;
-    height: 8.125rem; /* 130px */
-
+    height: 8.125rem; 
     padding-top: var(--20px);
-
+    z-index: 10; 
     background: linear-gradient(
             to bottom,
-            rgba(59,54,35,1),
+            rgba(59,54,35,0.8),
             rgba(59,54,35,0)
     );
 }
@@ -45,20 +76,18 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
     width: 90%;
     height: fit-content;
-
     margin: auto;
     padding: var(--20px);
     padding-inline: var(--25px);
     gap: var(--20px);
-
+    z-index: 10; 
     background-color: rgba(247, 237, 207, 0.45);
     border-radius: 5px;
-
     transition: all ease-in-out 0.3s;
 }
+
 .sectionsBar:hover {
     background-color: rgba(247, 237, 207, 0.70);
 }
@@ -135,11 +164,26 @@
     .desktopImage {
         display: flex;
     }
+
+    .mobileVideo {
+        display: none;
+    }
+    .desktopVideo {
+        display: block;
+    }
 }
 
 /*responsive for desktop*/
 @media (min-width: 1024px) {
     .sectionsBar {
         width: 70%;
+    }
+
+    .videoOverlay {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.05)
+        );
     }
 }

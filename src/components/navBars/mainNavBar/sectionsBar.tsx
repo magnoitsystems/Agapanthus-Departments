@@ -18,14 +18,13 @@ export default function SectionsBar() {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
-    // Variants para los textos
     const textVariants = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
     };
 
     return (
-        <main className={styles.sectionsBar}>
+        <div className={styles.sectionsBar}>
             <div className={`${styles.section} ${styles.classic}`} onClick={() => scrollToSection('nuestro-complejo')}>
                 <motion.h3
                     variants={textVariants}
@@ -59,6 +58,6 @@ export default function SectionsBar() {
                     Reservas
                 </motion.h3>
             </div>
-        </main>
+        </div>
     );
 }
