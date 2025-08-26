@@ -13,6 +13,8 @@ export function useOpiniones() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
+    console.log("hola use opiniones");
+
     const fetchOpiniones = async () => {
         try {
             setLoading(true);
