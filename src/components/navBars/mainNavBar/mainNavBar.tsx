@@ -15,11 +15,11 @@ export default function MainNavBar() {
             preload="auto"
         >
             <source src="/videos/agapanthus_vertical.mp4" type="video/mp4" />
-            {/* Fallback para navegadores que no soporten el video */}
+            {/* Fallback para navegadores que no soporten el video por las dudas*/}
             <img src="/testImages/navBarBackground.jpg" alt="Agapanthus Background" />
         </video>
 
-        {/* Video de fondo - Desktop */}
+        {/* Video de fondo - Desktop variant*/}
         <video 
             className={`${styles.backgroundVideo} ${styles.desktopVideo}`}
             autoPlay 

@@ -18,7 +18,6 @@ export default function SectionsBar() {
         setIsDropdownOpen(!isDropdownOpen);
     };
 
-    // Variants para los textos
     const textVariants = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 }
