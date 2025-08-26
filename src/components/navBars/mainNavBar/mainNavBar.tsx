@@ -5,6 +5,38 @@ import SectionsBar from "@/components/navBars/mainNavBar/sectionsBar";
 export default function MainNavBar() {
     return (
       <main className={styles.main}>
+        {/* Video de fondo - Mobile */}
+        <video 
+            className={`${styles.backgroundVideo} ${styles.mobileVideo}`}
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            preload="auto"
+        >
+            <source src="/videos/agapanthus_vertical.mp4" type="video/mp4" />
+            {/* Fallback para navegadores que no soporten el video */}
+            <img src="/testImages/navBarBackground.jpg" alt="Agapanthus Background" />
+        </video>
+
+        {/* Video de fondo - Desktop */}
+        <video 
+            className={`${styles.backgroundVideo} ${styles.desktopVideo}`}
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            preload="auto"
+        >
+            <source src="/videos/agapanthus_horizontal.mp4" type="video/mp4" />
+            {/* Fallback para navegadores que no soporten el video */}
+            <img src="/testImages/navBarBackground.jpg" alt="Agapanthus Background" />
+        </video>
+
+        {/* Overlay opcional para mejor legibilidad del texto */}
+        <div className={styles.videoOverlay}></div>
+
+        {/* NAV BAR CON LOGO */}
         <nav className={styles.nav}>
           <Image
             src={"/logos/white.png"}
@@ -23,6 +55,7 @@ export default function MainNavBar() {
             />
         </nav>
 
+        {/* SECTIONS BAR */}
         <SectionsBar/>
       </main>
     );

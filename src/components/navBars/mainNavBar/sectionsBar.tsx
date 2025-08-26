@@ -25,7 +25,7 @@ export default function SectionsBar() {
     };
 
     return (
-        <main className={styles.sectionsBar}>
+        <div className={styles.sectionsBar}>
             <div className={`${styles.section} ${styles.classic}`} onClick={() => scrollToSection('nuestro-complejo')}>
                 <motion.h3
                     variants={textVariants}
@@ -59,6 +59,6 @@ export default function SectionsBar() {
                     Reservas
                 </motion.h3>
             </div>
-        </main>
+        </div>
     );
 }
