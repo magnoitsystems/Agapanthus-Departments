@@ -44,13 +44,13 @@ export default function Home() {
                   image={'/testImages/interactiveGallery/prue.png'}
                   name={'Lavanda'}
                   cantGuests={4}
-                  description={'Cabaña moderna y luminosa con habitación en suite.' +
+                  description={'Cabaña moderna y luminosa.' +
                       ' Living con sofá cama, TV de pantalla plana, aire acondicionado y cocina ' +
                       'totalmente equipada con microondas, tostadora, pava eléctrica y demás.' +
                       ' Contiene además parrilla exterior.'}
                   forbidden={'No se permite fumar dentro de los departamentos. ' +
                       'Se solicita respeto por el descanso de los vecinos y cuidado del mobiliario.'}
-                  bath={2}
+                  bath={1}
                   dorm={1}
               />
           </div>
