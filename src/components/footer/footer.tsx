@@ -57,7 +57,13 @@ export default function footer(){
                     <span>Copyright ©2025. Designed by Magno</span>
                 </div>
                 <div className={styles.logoMagnoProperties}>
-                    <Image src={"/magno/logo.png"} alt={"Logo magno"} width={82} height={86}/>
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=magno.itsystems@gmail.com&su=Consultar%20por%20servicios%20de%20desarrollo%20de%20software"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Image src={"/magno/logo.png"} alt={"Logo magno"} width={82} height={86}/>
+                    </a>
                 </div>
             </div>
         </footer>
