@@ -1,5 +1,6 @@
 import styles from "./gallery.module.css";
 import { abyssinica } from "@/app/ui/fonts";
+import { useEffect, useState } from "react";
 
 export type ImageSize = "square" | "horizontal" | "vertical" | "large";
 
@@ -24,15 +25,31 @@ export default function GalleryItem({
   activeIndex,
   setActiveIndex,
 }: Props) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // detecta mobile una sola vez al montar
+    const checkMobile = () => window.innerWidth < 1025;
+    setIsMobile(checkMobile());
+    window.addEventListener("resize", () => setIsMobile(checkMobile()));
+    return () =>
+      window.removeEventListener("resize", () => setIsMobile(checkMobile()));
+  }, []);
+
   const isActive = activeIndex === index;
-  const isDimmed = activeIndex !== null && !isActive;
+
+  const handleClick = () => {
+    if (isMobile) {
+      setActiveIndex(isActive ? null : index); // toggle en mobile
+    }
+  };
 
   return (
     <div
-      className={`${styles.item} ${styles[img.size || "square"]} ${isDimmed ? styles.dimmed : ""
-        }`}
-      onMouseEnter={() => setActiveIndex(index)}
-      onMouseLeave={() => setActiveIndex(null)}
+      className={`${styles.item} ${styles[img.size || "square"]}`}
+      onMouseEnter={!isMobile ? () => setActiveIndex(index) : undefined}
+      onMouseLeave={!isMobile ? () => setActiveIndex(null) : undefined}
+      onClick={isMobile ? handleClick : undefined}
     >
       <img src={img.src} alt={img.title || "gallery"} />
       {img.highlight && (
@@ -43,7 +60,6 @@ export default function GalleryItem({
           {isActive && img.description && (
             <p className={styles.description}>{img.description}</p>
           )}
-
         </div>
       )}
     </div>

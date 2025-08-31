@@ -98,9 +98,6 @@
   opacity: 1 !important; 
 }
 
-.dimmed .overlay { 
-  opacity: 0 !important; 
-}
 
 /* Small Mobile (481px+) */
 @media (min-width: 481px) {
