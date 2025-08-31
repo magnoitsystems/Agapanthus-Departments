@@ -28,28 +28,30 @@ export default function GalleryItem({
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // detecta mobile una sola vez al montar
     const checkMobile = () => window.innerWidth < 1025;
+    const handleResize = () => setIsMobile(checkMobile());
     setIsMobile(checkMobile());
-    window.addEventListener("resize", () => setIsMobile(checkMobile()));
-    return () =>
-      window.removeEventListener("resize", () => setIsMobile(checkMobile()));
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const isActive = activeIndex === index;
+  const isDimmed = !isMobile && activeIndex !== null && !isActive;
 
   const handleClick = () => {
     if (isMobile) {
-      setActiveIndex(isActive ? null : index); // toggle en mobile
+      setActiveIndex(isActive ? null : index); 
     }
   };
 
   return (
     <div
-      className={`${styles.item} ${styles[img.size || "square"]}`}
+      className={`${styles.item} ${styles[img.size || "square"]} ${isDimmed ? styles.dimmed : ""}`}
       onMouseEnter={!isMobile ? () => setActiveIndex(index) : undefined}
       onMouseLeave={!isMobile ? () => setActiveIndex(null) : undefined}
       onClick={isMobile ? handleClick : undefined}
+      role="button"
+      tabIndex={0}
     >
       <img src={img.src} alt={img.title || "gallery"} />
       {img.highlight && (
@@ -57,7 +59,8 @@ export default function GalleryItem({
           <h1 className={`${abyssinica.className} ${styles.title}`}>
             {img.title}
           </h1>
-          {isActive && img.description && (
+          
+          {img.description && isActive && (
             <p className={styles.description}>{img.description}</p>
           )}
         </div>
