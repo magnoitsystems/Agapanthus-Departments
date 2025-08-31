@@ -38,7 +38,7 @@ export default function footer(){
                             <Image src={"/icons/phone.png"} alt={"Icono de telefono"} width={49} height={49}/>
                         </Link>
                     </div>
-                    <Link href={""}>
+                    <Link href={"https://www.instagram.com/agapanthus_lasmarias?utm_source=qr&igsh=MWN5OHVlenpxcGhveg=="}>
                         <Image src={"/icons/instagram.png"} alt={"Icono de instagram"} width={75} height={75}/>
                     </Link>
                     <Link href={""}>

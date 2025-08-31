@@ -27,7 +27,7 @@ export default function Home() {
 
           <div className={styles.deptos} id={'cabanas'}>
               <LeftImageCard
-                  image={'/testImages/interactiveGallery/prue.png'}
+                  image={'/images/sunset.jpg'}
                   name={'Aqua'}
                   cantGuests={6}
                   description={'Cabaña moderna y luminosa con 2 habitaciones, una de ellas en suite.' +
@@ -41,7 +41,7 @@ export default function Home() {
                   dorm={2}
               />
               <RightImageCard
-                  image={'/testImages/interactiveGallery/prue.png'}
+                  image={'/images/flowers.jpg'}
                   name={'Lavanda'}
                   cantGuests={4}
                   description={'Cabaña moderna y luminosa.' +

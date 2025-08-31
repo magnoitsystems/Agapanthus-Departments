@@ -16,12 +16,13 @@ export default function GroupFeatureCards() {
             <div className={styles.card}>
                 <FeatureCard
                     src={'/icons/sun.png'}
-                    title={'Piscina al aire libre'}
+                    title={'Amplio parque'}
                     details={[
-                        '1,40mts de profundidad',
+                        'Piscina de 1,40mts de profundidad',
                         'Playa húmeda',
                         'Jacuzzi',
-                        'Agua climatizada + conectores solares'
+                        'Agua climatizada + conectores solares',
+                        'Canchas de voley y futbol'
                     ]}
                 />
             </div>
