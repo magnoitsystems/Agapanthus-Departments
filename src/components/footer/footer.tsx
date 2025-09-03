@@ -35,14 +35,23 @@ export default function footer(){
                 <div className={styles.iconsProperties}>
                     <div className={styles.iconPhoneProperties}>
                         <Link href={""}>
-                            <Image src={"/icons/phone.png"} alt={"Icono de telefono"} width={49} height={49}/>
+                            <Image src={"/icons/phone.png"} alt={"Icono de telefono"} width={49} height={49} className={styles.desktopSocialMedia}/>
+                        </Link>
+                        <Link href={""}>
+                            <Image src={"/icons/phone.png"} alt={"Icono de telefono"} width={35} height={35} className={styles.mobileSocialMedia}/>
                         </Link>
                     </div>
                     <Link href={"https://www.instagram.com/agapanthus_lasmarias?utm_source=qr&igsh=MWN5OHVlenpxcGhveg=="}>
-                        <Image src={"/icons/instagram.png"} alt={"Icono de instagram"} width={75} height={75}/>
+                        <Image src={"/icons/instagram.png"} alt={"Icono de instagram"} width={75} height={75} className={styles.desktopSocialMedia}/>
+                    </Link>
+                    <Link href={"https://www.instagram.com/agapanthus_lasmarias?utm_source=qr&igsh=MWN5OHVlenpxcGhveg=="}>
+                        <Image src={"/icons/instagram.png"} alt={"Icono de instagram"} width={50} height={50} className={styles.mobileSocialMedia}/>
                     </Link>
                     <Link href={""}>
-                        <Image src={"/icons/facebook.png"} alt={"Icono de facebook"} width={75} height={75}/>
+                        <Image src={"/icons/facebook.png"} alt={"Icono de facebook"} width={75} height={75} className={styles.desktopSocialMedia}/>
+                    </Link>
+                    <Link href={""}>
+                        <Image src={"/icons/facebook.png"} alt={"Icono de facebook"} width={50} height={50} className={styles.mobileSocialMedia}/>
                     </Link>
                 </div>
                 <div className={styles.redirectionSideProperties}>
