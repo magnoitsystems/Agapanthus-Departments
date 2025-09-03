@@ -1,12 +1,14 @@
 // apartmentsData.ts
 export const aqua = [
-  'Acceso a la piscina',
-  'No apto jóvenes',
-  'Wifi gratis',
-  'Comodidades de cocina',
-  'Incluye electrodomésticos esenciales',
-  'Camas: 1 matrimonial - 3 individuales',
-  'Un baño completo y un toilet'
+    'Apto hasta 6 personas',
+    'Sofa cama + 2 Camas de 2 plazas',
+    'Microondas, tostadora, pava eléctrica',
+    'Parrilla exterior',
+    'Cochera exterior',
+    'TV de pantalla plana',
+    'Wi-Fi',
+    'Ropa de cama',
+    'Baño completo + 1 baño en suite'
 ];
 
 export const lavanda = [
