@@ -24,9 +24,16 @@ export const lavanda = [
 ];
 
 export const aquaImages = [
-  "/testImages/interactiveGallery/item1.jpeg",
-  "/testImages/interactiveGallery/item2.jpeg",
-  "/testImages/interactiveGallery/item3.jpeg"
+    "/dptos/aqua/outhouse.jpeg",
+    "/dptos/aqua/holeliving.jfif",
+    "/dptos/aqua/living.jfif",
+    "/dptos/aqua/kitchen.jpeg",
+    "/dptos/aqua/tv.jpeg",
+    "/dptos/aqua/bedroom1.jpeg",
+    "/dptos/aqua/bedroom1-2.jpeg",
+    "/dptos/aqua/bedroom2.jpeg",
+    "/dptos/aqua/bathroom.jpeg",
+    "/dptos/aqua/bathroom2.jpeg"
 ];
 
 export const lavandaImages = [
