@@ -10,11 +10,15 @@ export const aqua = [
 ];
 
 export const lavanda = [
-  'Acceso a la piscina',
-  'Apto jóvenes',
-  'Incluye electrodomésticos esenciales',
-  'Camas: 1 matrimonial - 3 individuales',
-  'Acceso cochera'
+  'Apto hasta 4 personas',
+  'Sofa cama + Cama de 2 plazas',
+  'Microondas, tostadora, pava eléctrica',
+  'Parrilla exterior',
+  'Cochera exterior',
+  'TV de pantalla plana',
+    'Wi-Fi',
+    'Ropa de cama',
+    'Baño completo'
 ];
 
 export const aquaImages = [
@@ -24,9 +28,17 @@ export const aquaImages = [
 ];
 
 export const lavandaImages = [
-  "/testImages/interactiveGallery/item4.webp",
-  "/testImages/interactiveGallery/item5.jpg",
-  "/testImages/interactiveGallery/item6.webp"
+    "/dptos/lavanda/outhouse.jpeg",
+    "/dptos/lavanda/outplants.jpeg",
+    "/dptos/lavanda/view.jpeg",
+    "/dptos/lavanda/holeliving.jpeg",
+    "/dptos/lavanda/living.jpeg",
+    "/dptos/lavanda/livingtable.jpeg",
+    "/dptos/lavanda/sofabed.jpeg",
+    "/dptos/lavanda/bedroom.jpeg",
+    "/dptos/lavanda/bathroom.jpeg",
+    "/dptos/lavanda/outplants2.jpeg",
+    "/dptos/lavanda/outhouse2.jpeg"
 ];
 
 export const DEFAULT_IMAGES = [

@@ -41,7 +41,7 @@ export default function Home() {
                   dorm={2}
               />
               <RightImageCard
-                  image={'/images/flowers.jpg'}
+                  image={'/dptos/lavanda/outplants2.jpeg'}
                   name={'Lavanda'}
                   cantGuests={4}
                   description={'Cabaña moderna y luminosa.' +
