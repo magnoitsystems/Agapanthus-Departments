@@ -25,6 +25,12 @@ export const metadata: Metadata = {
     "descanso",
     "tandil",
     "departamentos",
+    "cabañas en tandil",
+    "petfriendly",
+    "alquiler cabañas tandil",
+    "agapanthus las marias",
+    "agapanthus las marias tandil",
+    "cabañas agapanthus las marias"
   ],
 
   // Autor y generador
