@@ -37,17 +37,22 @@ export const aquaImages = [
 ];
 
 export const lavandaImages = [
-    "/dptos/lavanda/outhouse.jpeg",
+    "/dptos/lavanda/out.jpeg",
     "/dptos/lavanda/outplants.jpeg",
     "/dptos/lavanda/view.jpeg",
     "/dptos/lavanda/holeliving.jpeg",
     "/dptos/lavanda/living.jpeg",
     "/dptos/lavanda/livingtable.jpeg",
+    "/dptos/lavanda/kitchen.jpeg",
+    "/dptos/lavanda/water.jpeg",
     "/dptos/lavanda/sofabed.jpeg",
     "/dptos/lavanda/bedroom.jpeg",
+    "/dptos/lavanda/bed2.jpeg",
+    "/dptos/lavanda/bed3.jpeg",
+    "/dptos/lavanda/bed4.jpeg",
     "/dptos/lavanda/bathroom.jpeg",
     "/dptos/lavanda/outplants2.jpeg",
-    "/dptos/lavanda/outhouse2.jpeg"
+    "/dptos/lavanda/out2.jpeg"
 ];
 
 export const DEFAULT_IMAGES = [
