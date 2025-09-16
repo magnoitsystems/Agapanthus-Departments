@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 
             from: 'onboarding@resend.dev',
 
-            to: ['agapanthuslasmarias@gmail.com'],
+            to: ['milagrosalvarez2604@gmail.com'],
 
             subject: `Consulta de reserva de ${name}`,
             html: `
