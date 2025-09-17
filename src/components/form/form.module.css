@@ -1,8 +1,8 @@
-.formSectionProperties{
+.formSectionProperties {
     position: relative;
     width: 100%;
     height: fit-content;
-    background-image: url("/testImages/formBackground.png");
+    background-image: url("/images/form-pool.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -11,6 +11,21 @@
     gap: var(--30px);
 }
 
+.formSectionProperties::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.formSectionProperties > * {
+    position: relative;
+    z-index: 2; 
+}
 .infoProperties{
     display: flex;
     flex-direction: column;

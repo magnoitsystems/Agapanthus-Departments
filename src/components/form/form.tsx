@@ -138,7 +138,7 @@ export default function Form() {
                   }}
                   disabled={isSubmitting}
                 >
-                    {isSubmitting ? 'Enviando...' : 'Enviar consula'}
+                    {isSubmitting ? 'Enviando...' : 'Enviar consulta'}
                 </motion.button>
                   {message && (
                       <SuccessAlert message1={message} />

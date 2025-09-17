@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./carousel.module.css";
@@ -15,7 +15,7 @@ type Props = {
     images?: string[];
     autoplayMs?: number;
     showControls?: boolean;
-    dimmed?: boolean; // 👈 nueva prop
+    dimmed?: boolean;
 };
 
 export default function Carousel({
@@ -26,6 +26,9 @@ export default function Carousel({
 }: Props) {
     const searchParams = useSearchParams();
     const cabinId = searchParams.get("id");
+    const touchStartX = useRef<number | null>(null);
+    const touchStartY = useRef<number | null>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const imgs = useMemo(() => {
         if (images && images.length) return images;
@@ -45,9 +48,53 @@ export default function Carousel({
         setDirection(1);
         setIndex((i) => (i + 1) % imgs.length);
     };
+    
     const prev = () => {
         setDirection(-1);
         setIndex((i) => (i - 1 + imgs.length) % imgs.length);
+    };
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+        touchStartY.current = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (touchStartX.current === null || touchStartY.current === null) return;
+
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        
+        const deltaX = touchStartX.current - touchEndX;
+        const deltaY = touchStartY.current - touchEndY;
+        
+        const minSwipeDistance = 50;
+        const maxVerticalMovement = 100;
+        
+        if (Math.abs(deltaX) > minSwipeDistance && Math.abs(deltaY) < maxVerticalMovement) {
+            if (deltaX > 0) {
+                next();
+            } else {
+                prev();
+            }
+        }
+
+        touchStartX.current = null;
+        touchStartY.current = null;
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        if (touchStartX.current !== null && touchStartY.current !== null) {
+            const touchCurrentX = e.touches[0].clientX;
+            const touchCurrentY = e.touches[0].clientY;
+            
+            const deltaX = Math.abs(touchCurrentX - touchStartX.current);
+            const deltaY = Math.abs(touchCurrentY - touchStartY.current);
+            
+            if (deltaX > deltaY) {
+                e.preventDefault();
+            }
+        }
     };
 
     useEffect(() => {
@@ -67,7 +114,13 @@ export default function Carousel({
 
     return (
         <>
-            <div className={styles.bg}>
+            <div 
+                className={styles.bg}
+                ref={containerRef}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+                onTouchMove={handleTouchMove}
+            >
                 <AnimatePresence mode="popLayout" custom={direction}>
                     <motion.img
                         key={index}
@@ -87,7 +140,7 @@ export default function Carousel({
                     />
                 </AnimatePresence>
 
-                {/* 👇 overlay semitransparente */}
+                {/* overlay semitransparente */}
                 {dimmed && <div className={styles.overlay} />}
             </div>
 
