@@ -6,13 +6,8 @@ export async function POST(request: Request) {
 
     try {
         // Debug 1: Variables de entorno
-        console.log('1. Verificando variables de entorno...');
-        console.log('   - API Key exists:', !!process.env.RESEND_API_KEY);
-        console.log('   - API Key length:', process.env.RESEND_API_KEY?.length);
-        console.log('   - NODE_ENV:', process.env.NODE_ENV);
 
         if (!process.env.RESEND_API_KEY) {
-            console.error('   ❌ RESEND_API_KEY no está definida');
             return NextResponse.json(
                 { error: 'API key de Resend no configurada' },
                 { status: 500 }
@@ -34,8 +29,8 @@ export async function POST(request: Request) {
         // Debug 4: Configurar email
         console.log('4. Configurando email...');
         const emailConfig = {
-            from: 'onboarding@resend.dev',
-            to: ['guerreromabelen@gmail.com'],
+            from: 'noreply@agapanthuslasmarias.com',
+            to: ['agapanthuslasmarias@gmail.com'],
             subject: `Consulta de reserva de ${nameAndLastname}`,
             html: `
             <div>
@@ -56,24 +51,15 @@ export async function POST(request: Request) {
             </div>
             `,
         };
-        console.log('   ✅ Email configurado');
 
-        // Debug 5: Enviar email
-        console.log('5. Enviando email...');
         const { data, error } = await resend.emails.send(emailConfig);
 
         if (error) {
-            console.error('   ❌ Error de Resend:', error);
-            console.error('   ❌ Error completo:', JSON.stringify(error, null, 2));
             return NextResponse.json({
                 error: 'Error al enviar el correo',
                 details: error
             }, { status: 500 });
         }
-
-        console.log('   ✅ Email enviado exitosamente');
-        console.log('   - Data:', data);
-        console.log('=== FIN API ROUTE EXITOSO ===');
 
         return NextResponse.json({
             ok: true,
@@ -82,8 +68,6 @@ export async function POST(request: Request) {
         });
 
     } catch (error) {
-
-
         return NextResponse.json({
             error: 'Error interno del servidor',
         }, { status: 500 });
