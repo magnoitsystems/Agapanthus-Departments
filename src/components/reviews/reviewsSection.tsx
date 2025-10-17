@@ -5,10 +5,7 @@ import styles from "./reviewsSection.module.css";
 import { abyssinica } from "@/app/ui/fonts";
 import { useOpiniones } from "@/hooks/useOpinions";
 import { motion } from "framer-motion";
-// Importa íconos (asumiendo que tienes una librería de íconos o puedes usar SVG simples)
-// Para este ejemplo, usaré íconos de flecha como SVG.
 
-// Componente para los íconos de flecha (Puedes reemplazarlos con íconos de tu librería, ej: lucide-react, react-icons)
 const ChevronLeft = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -24,6 +21,7 @@ const ChevronLeft = () => (
     <path d="m15 18-6-6 6-6" />
   </svg>
 );
+
 const ChevronRight = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -49,23 +47,25 @@ export default function ReviewsSection() {
   const [buttonText, setButtonText] = useState("Enviar reseña");
   const [buttonActive, setButtonActive] = useState(false);
 
-  // --- Lógica del Carrusel ---
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const scrollCarousel = useCallback((direction: "left" | "right") => {
     if (carouselRef.current) {
-      const scrollAmount = direction === "right" ? carouselRef.current.clientWidth : -carouselRef.current.clientWidth;
+      const reviewCard = carouselRef.current.querySelector(`.${styles.reviewCard}`) as HTMLElement;
       
-      // Intentamos desplazar por el ancho del carrusel, pero con 'scroll-snap-align' en CSS
-      // el navegador se encargará de "ajustar" al inicio de la siguiente/anterior tarjeta.
+      const cardWidth = reviewCard ? reviewCard.offsetWidth : carouselRef.current.clientWidth;
+      const gap = 20; 
+      
+      const scrollAmount = direction === "right" 
+        ? cardWidth + gap 
+        : -(cardWidth + gap);
+
       carouselRef.current.scrollBy({
         left: scrollAmount,
         behavior: "smooth",
       });
     }
   }, []);
-  // --- Fin Lógica del Carrusel ---
-
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,7 +98,7 @@ export default function ReviewsSection() {
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }} // la animación se dispara solo una vez
+      viewport={{ once: true }} 
     >
       <main className={styles.reviewsSection}>
         <div className={styles.container}>
@@ -158,58 +158,49 @@ export default function ReviewsSection() {
             </form>
           </div>
         </div>
-        
-        {/* --- Nuevo Carrusel --- */}
+
         <div className={styles.reviewsCarousel}>
-            {/* Botón Izquierda */}
-            {opiniones.length > 0 && (
-                <button 
-                    className={`${styles.navButton} ${styles.prevButton}`} 
-                    onClick={() => scrollCarousel("left")} 
-                    aria-label="Anterior reseña"
-                >
-                    <ChevronLeft />
-                </button>
-            )}
-
-            <div 
-                className={styles.scrollingWrapper} 
-                ref={carouselRef}
+          {opiniones.length > 0 && (
+            <button
+              className={`${styles.navButton} ${styles.prevButton}`}
+              onClick={() => scrollCarousel("left")}
+              aria-label="Anterior reseña"
             >
-                <div className={styles.scrollingContent}>
-                    {opiniones.map((review) => (
-                    <div key={review.id} className={styles.reviewCard}>
-                        <h4
-                        className={`${styles.reviewName} ${abyssinica.className}`}
-                        >
-                        {" "}
-                        {review.autor}{" "}
-                        </h4>{" "}
-                        <p
-                        className={`${styles.reviewText} ${abyssinica.className}`}
-                        >
-                        {" "}
-                        {review.contenido}{" "}
-                        </p>
-                    </div>
-                    ))}
+              <ChevronLeft />
+            </button>
+          )}
+
+          <div className={styles.scrollingWrapper} ref={carouselRef}>
+            <div className={styles.scrollingContent}>
+              {opiniones.map((review) => (
+                <div key={review.id} className={styles.reviewCard}>
+                  <h4
+                    className={`${styles.reviewName} ${abyssinica.className}`}
+                  >
+                    {" "}
+                    {review.autor}{" "}
+                  </h4>{" "}
+                  <p
+                    className={`${styles.reviewText} ${abyssinica.className}`}
+                  >
+                    {" "}
+                    {review.contenido}{" "}
+                  </p>
                 </div>
+              ))}
             </div>
-            
-            {/* Botón Derecha */}
-            {opiniones.length > 0 && (
-                <button 
-                    className={`${styles.navButton} ${styles.nextButton}`} 
-                    onClick={() => scrollCarousel("right")} 
-                    aria-label="Siguiente reseña"
-                >
-                    <ChevronRight />
-                </button>
-            )}
+          </div>
 
+          {opiniones.length > 0 && (
+            <button
+              className={`${styles.navButton} ${styles.nextButton}`}
+              onClick={() => scrollCarousel("right")}
+              aria-label="Siguiente reseña"
+            >
+              <ChevronRight />
+            </button>
+          )}
         </div>
-        {/* --- Fin Nuevo Carrusel --- */}
-
       </main>
     </motion.div>
   );

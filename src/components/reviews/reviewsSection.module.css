@@ -1,4 +1,3 @@
-/* Mobile First - Base styles (320px+) */
 .reviewsSection {
   padding: 60px var(--15px);
   background: #f8f9fa;
@@ -8,7 +7,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; 
+  padding: 0 20px;
 }
 
 .header {
@@ -104,6 +103,7 @@
   transition: all 0.3s ease;
   align-self: center;
   width: 100%;
+  border: none;
 }
 
 
@@ -125,130 +125,9 @@
   overflow: hidden;
   position: relative;
   width: 100%;
+  padding: 0 40px;
 }
 
-.scrollingWrapper {
-  display: flex;
-  width: 100%;
-}
-
-.scrollingContent {
-  display: flex;
-  gap: var(--20px);
-  width: max-content;
-  animation: marquee 17s linear infinite;
-}
-.scrollingWrapper:hover .scrollingContent {
-  animation-play-state: paused;
-}
-
-.scrollingContent::after {
-  content: '';
-  display: block;
-  width: 100%;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.reviewCard {
-  min-width: 250px;
-  padding: var(--20px);
-  background: linear-gradient(135deg, var(--aqua-2), var(--aqua-4));
-  border-radius: 16px;
-  color: white;
-  box-shadow: 0 var(--8px) var(--30px) var(--review-shadow);
-  flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.reviewCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
-  pointer-events: none;
-}
-
-.reviewName {
-  font-size: 1.3rem;
-  font-weight: lighter;
-  margin-bottom: 12px;
-  color: var(--caqui-5);
-}
-
-.reviewText {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin: 0;
-  color: var(--aqua-6);
-}
-
-/* Tablet (481px+) */
-@media (min-width: 481px) {
-  .reviewsSection {
-    padding: 80px 0;
-  }
-
-  .reviewCard {
-    min-width: 280px;
-    padding: var(--25px);
-  }
-
-  .scrollingContent {
-    animation-duration: 17s;
-  }
-}
-
-/* Desktop Small (769px+) */
-@media (min-width: 769px) {
-  .title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: var(--h2);
-  }
-
-  .form {
-    gap: var(--25px);
-  }
-
-  .reviewCard {
-    min-width: 320px;
-    padding: var(--30px);
-  }
-}
-
-/* Desktop Large (1024px+) */
-@media (min-width: 1024px) {
-  .title {
-    font-size: var(--40px);
-  }
-
-  .subtitle {
-    font-size: var(--30px);
-  }
-}
-
-.reviewsCarousel {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  padding: 0 40px; /* Espacio para los botones de navegación */
-}
-
-/* Botones de navegación */
 .navButton {
   position: absolute;
   top: 50%;
@@ -282,15 +161,13 @@
 }
 
 .scrollingWrapper {
-  /* Habilitamos el desplazamiento horizontal y el "snap" */
   display: flex;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory; /* Obliga al scroll a ajustarse */
-  -webkit-overflow-scrolling: touch; /* Mejor desplazamiento en iOS */
-  scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
-/* Oculta la barra de scroll en navegadores basados en Webkit */
 .scrollingWrapper::-webkit-scrollbar {
   display: none;
 }
@@ -298,16 +175,13 @@
 .scrollingContent {
   display: flex;
   gap: var(--20px);
-  padding-bottom: 20px; /* Para evitar que las sombras se corten */
-  /* Quitamos el 'width: max-content' y la animación 'marquee' */
+  padding-bottom: 20px;
 }
-/* Estilo anterior: .scrollingWrapper:hover .scrollingContent { animation-play-state: paused; } */
-/* Estilo anterior: @keyframes marquee { ... } */
-/* Estilo anterior: .scrollingContent::after { ... } */
-
 
 .reviewCard {
-  min-width: 80%; /* Ocupa un buen tamaño en móvil, ajustado más abajo */
+  min-width: 85%;
+  max-width: 500px;
+  
   padding: var(--20px);
   background: linear-gradient(135deg, var(--aqua-2), var(--aqua-4));
   border-radius: 16px;
@@ -317,41 +191,80 @@
   position: relative;
   overflow: hidden;
 
-  /* Esto hace que el scroll se detenga exactamente al inicio de cada tarjeta */
-  scroll-snap-align: start; 
+  scroll-snap-align: start;
 }
 
-/* ... [Tus estilos para .reviewCard::before, .reviewName, .reviewText] ... */
+.reviewCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  pointer-events: none;
+}
 
-/* Tablet (481px+) */
+.reviewName {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  margin-bottom: 12px;
+  color: var(--caqui-5);
+}
+
+.reviewText {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--aqua-6);
+  word-wrap: break-word;
+}
+
 @media (min-width: 481px) {
-  /* ... [Tus estilos anteriores] ... */
+  .reviewsSection {
+    padding: 80px 0;
+  }
 
   .reviewCard {
-    min-width: 45%; /* Dos tarjetas visibles por defecto en tablet */
+    min-width: 48%; 
+    max-width: 600px; 
   }
 }
 
-/* Desktop Small (769px+) */
 @media (min-width: 769px) {
-  /* ... [Tus estilos anteriores] ... */
-  
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: var(--h2);
+  }
+
+  .form {
+    gap: var(--25px);
+  }
+
   .reviewCard {
-    min-width: 33.333%; /* Tres tarjetas visibles por defecto en desktop */
+    min-width: calc(33.333% - var(--20px));
+    max-width: 700px; 
   }
   
-  /* Hacemos que los botones de navegación sean un poco más grandes en desktop */
   .navButton {
     width: 50px;
     height: 50px;
   }
 }
 
-/* Desktop Large (1024px+) */
 @media (min-width: 1024px) {
-  /* ... [Tus estilos anteriores] ... */
+  .title {
+    font-size: var(--40px);
+  }
+
+  .subtitle {
+    font-size: var(--30px);
+  }
 
   .reviewsCarousel {
-    padding: 0 60px; /* Más espacio para los botones */
+    padding: 0 60px;
   }
 }
