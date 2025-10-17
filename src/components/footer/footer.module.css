@@ -1,165 +1,303 @@
 .footerProperties{
+
     display: flex;
+
     flex-direction: column;
-    gap: var(--10px);
+
+    gap: var(--30px);
+
     height: fit-content;
+
     width: 100%;
+
     background-color: var(--aqua-4);
-    padding-top: var(--20px);
+
 }
+
+
 
 .mainFooterProperties{
+
     display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: flex-start;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
     width: 100%;
-    padding: 0 var(--20px); 
-    position: relative;
+
+    gap: var(--20px);
+
 }
+
+
 
 .footerWithCopyright{
+
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    height: 120px; 
+
+    flex-direction: row;
+
+    align-items: center;
+
+    height: 120px;
+
     width: 100%;
+
     background-color: var(--aqua-5);
+
     padding: var(--15px);
-    gap: 5px; 
+
+    padding-bottom: 0;
+
 }
+
+
 
 .copyrightProperties{
+
     display: flex;
+
     flex-direction: row;
-    white-space: nowrap;
-    width: 100%;
-    justify-content: center; 
+
+    white-space: none;
+
 }
+
+
 
 .footerWithCopyright span, .redirectionSideProperties h4{
+
     color: var(--neutral-6);
+
     font-size: var(--20px);
+
     font-family: Abyssinica SIL;
+
     cursor: pointer;
+
 }
+
+
 
 .iconPhoneProperties{
-    width: 35px; 
-    height: 35px;
+
+    width: 50px;
+
+    height: 50px;
+
     background-color: var(--neutral-6);
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     border-radius: 80px;
+
 }
+
+
 
 .logoProperties{
+
     display: flex;
-    justify-content: flex-start;
+
+    flex-direction: row;
+
+    justify-content: center;
+
     align-items: center;
+
+    width: 100%;
+
     height: fit-content;
-    cursor: pointer;
-    z-index: 2;
+
+    padding: var(--20px);
+
 }
+
+
 
 .mobileImg {
+
     display: flex;
-}
-.desktopImg {
-    display: none;
+
 }
 
-.centerRedirections {
-    padding-bottom: var(--10px);
+.desktopImg {
+
+    display: none;
+
+}
+
+
+
+.redirectionsProperties{
+
+    display: flex;
+
+    flex-direction: column;
+
     justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
 }
 
 .redirectionSideProperties h4 {
+
     font-weight: lighter;
+
     color: var(--neutral-6);
+
     font-size: var(--h5);
+
 }
+
+
 
 .iconsProperties{
+
     display: flex;
+
     flex-direction: row;
-    align-items: center;
+
     gap: var(--10px);
-    
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+
 }
+
+
 
 .redirectionSideProperties{
+
     display: flex;
+
     flex-direction: row;
+
     gap: var(--20px);
+
     padding-inline: var(--20px);
+
 }
+
+
 
 .desktopSocialMedia {
+
     display: none;
+
 }
+
 .mobileSocialMedia {
+
     display: flex;
+
 }
+
+
 
 @media (min-width: 786px) {
-    .footerProperties {
-        gap: var(--20px);
-    }
 
-    .mainFooterProperties {
-        padding: 0 var(--40px);
-    }
-    
-    .logoProperties {
-        padding-left: 0;
-    }
-    
     .iconPhoneProperties {
-        width: 50px;
-        height: 50px;
+
+        width: 75px;
+
+        height: 75px;
+
         margin-inline: var(--10px);
+
     }
 
-    .footerWithCopyright {
-        height: 150px; 
-        padding: var(--15px) var(--40px);
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
+
 
     .copyrightProperties {
-        white-space: nowrap;
+
+        padding-left: var(--5px);
+
+        white-space: none;
+
     }
 
-    .copyrightProperties span {
-        font-size: var(--20px);
+
+
+    .logoMagnoProperties {
+
+        padding-left: 0;
+
     }
+
+
+
+    .footerWithCopyright span, .redirectionSideProperties a {
+
+        color: var(--neutral-6);
+
+        font-size: var(--h5);
+
+        font-family: Abyssinica SIL;
+
+    }
+
+
 
     .mobileImg {
+
         display: none;
+
     }
 
+
+
     .desktopImg {
+
         display: flex;
+
     }
-    
+
+
+
+    .logoProperties {
+
+        justify-content: left;
+
+        padding-left: var(--20px);
+
+        padding-top: var(--20px);
+
+    }
+
+
+
+    .footerWithCopyright {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        height: fit-content;
+
+    }
+
+
+
     .desktopSocialMedia {
+
         display: flex;
+
     }
+
     .mobileSocialMedia {
+
         display: none;
+
     }
-    
-    .centerRedirections {
-        padding-bottom: var(--15px);
-    }
+
 }
