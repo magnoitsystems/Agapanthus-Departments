@@ -240,3 +240,118 @@
     font-size: var(--30px);
   }
 }
+
+.reviewsCarousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 0 40px; /* Espacio para los botones de navegación */
+}
+
+/* Botones de navegación */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--aqua-4);
+  color: var(--caqui-1);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navButton:hover {
+  background: var(--aqua-5);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prevButton {
+  left: 0;
+}
+
+.nextButton {
+  right: 0;
+}
+
+.scrollingWrapper {
+  /* Habilitamos el desplazamiento horizontal y el "snap" */
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory; /* Obliga al scroll a ajustarse */
+  -webkit-overflow-scrolling: touch; /* Mejor desplazamiento en iOS */
+  scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+}
+
+/* Oculta la barra de scroll en navegadores basados en Webkit */
+.scrollingWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollingContent {
+  display: flex;
+  gap: var(--20px);
+  padding-bottom: 20px; /* Para evitar que las sombras se corten */
+  /* Quitamos el 'width: max-content' y la animación 'marquee' */
+}
+/* Estilo anterior: .scrollingWrapper:hover .scrollingContent { animation-play-state: paused; } */
+/* Estilo anterior: @keyframes marquee { ... } */
+/* Estilo anterior: .scrollingContent::after { ... } */
+
+
+.reviewCard {
+  min-width: 80%; /* Ocupa un buen tamaño en móvil, ajustado más abajo */
+  padding: var(--20px);
+  background: linear-gradient(135deg, var(--aqua-2), var(--aqua-4));
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 var(--8px) var(--30px) var(--review-shadow);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+
+  /* Esto hace que el scroll se detenga exactamente al inicio de cada tarjeta */
+  scroll-snap-align: start; 
+}
+
+/* ... [Tus estilos para .reviewCard::before, .reviewName, .reviewText] ... */
+
+/* Tablet (481px+) */
+@media (min-width: 481px) {
+  /* ... [Tus estilos anteriores] ... */
+
+  .reviewCard {
+    min-width: 45%; /* Dos tarjetas visibles por defecto en tablet */
+  }
+}
+
+/* Desktop Small (769px+) */
+@media (min-width: 769px) {
+  /* ... [Tus estilos anteriores] ... */
+  
+  .reviewCard {
+    min-width: 33.333%; /* Tres tarjetas visibles por defecto en desktop */
+  }
+  
+  /* Hacemos que los botones de navegación sean un poco más grandes en desktop */
+  .navButton {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Desktop Large (1024px+) */
+@media (min-width: 1024px) {
+  /* ... [Tus estilos anteriores] ... */
+
+  .reviewsCarousel {
+    padding: 0 60px; /* Más espacio para los botones */
+  }
+}
