@@ -179,8 +179,8 @@
 }
 
 .reviewCard {
-  min-width: 85%;
-  max-width: 500px;
+  min-width: 85%; 
+  max-width: 500px; 
   
   padding: var(--20px);
   background: linear-gradient(135deg, var(--aqua-2), var(--aqua-4));
