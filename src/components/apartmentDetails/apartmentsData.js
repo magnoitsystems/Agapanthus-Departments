@@ -24,21 +24,27 @@ export const lavanda = [
 ];
 
 export const aquaImages = [
-    "/dptos/aqua/outhouse.jpeg",
-    "/dptos/aqua/holeliving.jfif",
-    "/dptos/aqua/living.jfif",
-    "/dptos/aqua/kitchen.jpeg",
-    "/dptos/aqua/tv.jpeg",
-    "/dptos/aqua/bedroom1.jpeg",
-    "/dptos/aqua/bedroom1-2.jpeg",
-    "/dptos/aqua/bedroom2.jpeg",
-    "/dptos/aqua/bathroom.jpeg",
-    "/dptos/aqua/bathroom2.jpeg"
+    "/dptos/aqua/IMG_0697.JPG",
+    "/dptos/aqua/IMG_0695.JPG",
+    "/dptos/aqua/IMG_0694.JPG",
+    "/dptos/aqua/IMG_0692.JPG",
+    "/dptos/aqua/IMG_0691.JPG",
+    "/dptos/aqua/IMG_0690.JPG",
+    "/dptos/aqua/IMG_0659.JPG",
+    "/dptos/aqua/IMG_0656.JPG",
+    "/dptos/aqua/IMG_0654.JPG",
+    "/dptos/aqua/IMG_0686.JPG",
+    "/dptos/aqua/IMG_0678.JPG",
+    "/dptos/aqua/IMG_0672.JPG",
+    "/dptos/aqua/IMG_0669.JPG",
+    "/dptos/aqua/IMG_0666.JPG",
+    "/dptos/aqua/IMG_0661.JPG",
+    "/dptos/aqua/IMG_0663.JPG",
 ];
 
 export const lavandaImages = [
-    "/dptos/lavanda/out.jpeg",
-    "/dptos/lavanda/outplants.jpeg",
+    "/dptos/lavanda2/out.jpeg",
+    "/dptos/lavanda2/outplants.jpeg",
     "/dptos/lavanda/view.jpeg",
     "/dptos/lavanda/holeliving.jpeg",
     "/dptos/lavanda/living.jpeg",
