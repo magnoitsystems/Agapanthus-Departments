@@ -1,153 +1,303 @@
 .footerProperties{
+
     display: flex;
+
     flex-direction: column;
+
     gap: var(--30px);
+
     height: fit-content;
+
     width: 100%;
+
     background-color: var(--aqua-4);
+
 }
+
+
 
 .mainFooterProperties{
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
+
     width: 100%;
+
     gap: var(--20px);
+
 }
+
+
 
 .footerWithCopyright{
+
     display: flex;
+
     flex-direction: row;
+
     align-items: center;
+
     height: 120px;
+
     width: 100%;
+
     background-color: var(--aqua-5);
+
     padding: var(--15px);
+
     padding-bottom: 0;
+
 }
+
+
 
 .copyrightProperties{
+
     display: flex;
+
     flex-direction: row;
+
     white-space: none;
+
 }
+
+
 
 .footerWithCopyright span, .redirectionSideProperties h4{
+
     color: var(--neutral-6);
+
     font-size: var(--20px);
+
     font-family: Abyssinica SIL;
+
     cursor: pointer;
+
 }
+
+
 
 .iconPhoneProperties{
+
     width: 50px;
+
     height: 50px;
+
     background-color: var(--neutral-6);
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     border-radius: 80px;
+
 }
+
+
 
 .logoProperties{
+
     display: flex;
+
     flex-direction: row;
+
     justify-content: center;
+
     align-items: center;
+
     width: 100%;
+
     height: fit-content;
+
     padding: var(--20px);
+
 }
+
+
 
 .mobileImg {
+
     display: flex;
+
 }
+
 .desktopImg {
+
     display: none;
+
 }
+
+
 
 .redirectionsProperties{
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 10px;
+
 }
+
 .redirectionSideProperties h4 {
+
     font-weight: lighter;
+
     color: var(--neutral-6);
+
     font-size: var(--h5);
+
 }
+
+
 
 .iconsProperties{
+
     display: flex;
+
     flex-direction: row;
+
     gap: var(--10px);
+
 }
+
+
 
 .redirectionSideProperties{
+
     display: flex;
+
     flex-direction: row;
+
     gap: var(--20px);
+
     padding-inline: var(--20px);
+
 }
+
+
 
 .desktopSocialMedia {
+
     display: none;
+
 }
+
 .mobileSocialMedia {
+
     display: flex;
+
 }
+
+
 
 @media (min-width: 786px) {
+
     .iconPhoneProperties {
+
         width: 75px;
+
         height: 75px;
+
         margin-inline: var(--10px);
+
     }
+
+
 
     .copyrightProperties {
+
         padding-left: var(--5px);
+
         white-space: none;
+
     }
+
+
 
     .logoMagnoProperties {
+
         padding-left: 0;
+
     }
+
+
 
     .footerWithCopyright span, .redirectionSideProperties a {
+
         color: var(--neutral-6);
+
         font-size: var(--h5);
+
         font-family: Abyssinica SIL;
+
     }
+
+
 
     .mobileImg {
+
         display: none;
+
     }
+
+
 
     .desktopImg {
+
         display: flex;
+
     }
+
+
 
     .logoProperties {
+
         justify-content: left;
+
         padding-left: var(--20px);
+
         padding-top: var(--20px);
+
     }
+
+
 
     .footerWithCopyright {
+
         flex-direction: column;
+
         justify-content: center;
+
         align-items: center;
+
         height: fit-content;
+
     }
+
+
 
     .desktopSocialMedia {
-        display: flex;
-    }
-    .mobileSocialMedia {
-        display: none;
-    }
-}
 
+        display: flex;
+
+    }
+
+    .mobileSocialMedia {
+
+        display: none;
+
+    }
+
+}

@@ -5,24 +5,24 @@ import GalleryItem, { GalleryImage } from "./galleryItem";
 
 const images: GalleryImage[] = [
   {
-    src: "images/flowers.jpg",
+    src: "complejo/IMG_0718.JPG",
     title: "Ubicación privilegiada",
     description: "Zona tranquila y libre de ruidos molestos, ideal para descansar.",
     highlight: true,
     size: "large", 
   },
   {
-    src: "images/park.jpg",
+    src: "complejo/IMG_0706.JPG",
     highlight: false,
     size: "square",
   },
   {
-    src: "images/pool.jpg",
+    src: "complejo/IMG_0710.JPG",
     highlight: false,
     size: "square", 
   },
   {
-    src: "images/sunset.jpg",
+    src: "dptos/aqua/IMG_0654.JPG",
     highlight: false,
     size: "horizontal", 
   },
@@ -34,21 +34,11 @@ const images: GalleryImage[] = [
     size: "horizontal", 
   },
   {
-    src: "images/flowers.jpg",
+    src: "complejo/IMG_0720.JPG",
     title: "Estadía Pet-Friendly",
     description: "Estadía pet-friendly para que disfrutes de Tandil junto a tu mascota.",
     highlight: true,
     size: "large", 
-  },
-  {
-    src: "images/flowers.jpg",
-    highlight: false,
-    size: "square", 
-  },
-  {
-    src: "images/pool.jpg",
-    highlight: false,
-    size: "square", 
   },
   {
     src: "images/sunset.jpg",
@@ -56,7 +46,17 @@ const images: GalleryImage[] = [
     size: "square", 
   },
   {
-    src: "images/sunset2.jpg",
+    src: "complejo/IMG_0711.JPG",
+    highlight: false,
+    size: "square", 
+  },
+  {
+    src: "dptos/aqua/IMG_0691.JPG",
+    highlight: false,
+    size: "square", 
+  },
+  {
+    src: "dptos/lavanda/IMG_0641.JPG",
     highlight: false,
     size: "square", 
   },
