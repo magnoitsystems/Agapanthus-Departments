@@ -23,15 +23,15 @@ export async function POST(request: Request) {
         const body = await request.json();
         console.log('   - Body recibido:', body);
 
-        const { nameAndLastname, tel, cant, date1, date2 } = body;
-        console.log('   - Datos extraídos:', { nameAndLastname, tel, cant, date1, date2 });
+        const { name, tel, cant, email, date1, date2 } = body;
+        console.log('   - Datos extraídos:', { name, tel, cant, email, date1, date2 });
 
         // Debug 4: Configurar email
         console.log('4. Configurando email...');
         const emailConfig = {
             from: 'noreply@agapanthuslasmarias.com',
             to: ['agapanthuslasmarias@gmail.com'],
-            subject: `Consulta de reserva de ${nameAndLastname}`,
+            subject: `Consulta de reserva de ${name}`,
             html: `
             <div>
                 <h1>Nueva consulta de reserva</h1>
@@ -39,8 +39,9 @@ export async function POST(request: Request) {
                 <hr>
                 <h2>Datos del Contacto:</h2>
                 <ul>
-                  <li><strong>Nombre y Apellido:</strong> ${nameAndLastname}</li>
+                  <li><strong>Nombre y Apellido:</strong> ${name}</li>
                   <li><strong>Teléfono:</strong> ${tel}</li>
+                  <li><strong>Email:</strong> ${email}</li>
                 </ul>
                 <h2>Datos de la Reserva:</h2>
                 <ul>

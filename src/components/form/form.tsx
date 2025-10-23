@@ -12,6 +12,7 @@ export default function Form() {
         name: '',
         tel: '',
         cant: '',
+        email: '',
         date1: '',
         date2: ''
     });
@@ -50,7 +51,7 @@ export default function Form() {
 
             if (result.ok) {
                 setMessage('¡Reserva enviada con éxito! Nos pondremos en contacto pronto.');
-                setFormData({ name: '', tel: '', cant: '', date1: '', date2: '' });
+                setFormData({ name: '', tel: '', cant: '', email: '', date1: '', date2: '' });
             } else {
                 setMessage(`Error al enviar: ${result.error || 'Inténtelo de nuevo más tarde.'}`);
             }
@@ -112,6 +113,19 @@ export default function Form() {
                 onChange={handleChange}
               />
             </label>
+              <label htmlFor={"email"}>
+                  Email
+                  <input
+                      className={styles.inputProperties}
+                      type="text"
+                      id="email"
+                      name="email"
+                      placeholder={"Email"}
+                      value={formData.email}
+                      required
+                      onChange={handleChange}
+                  />
+              </label>
             <div className={styles.lastFormRow}>
               <div className={styles.datesInputsProperties}>
                 <label htmlFor={"date1"}>
