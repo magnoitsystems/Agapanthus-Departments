@@ -1,0 +1,256 @@
+[33mcommit cfafc7624fc1e31ce8b0f21e8bb19e84e771c172[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Thu Oct 23 19:21:47 2025 -0300
+
+    replace with less quality video
+
+[33mcommit 01647633ff5c3f57f8622d655e7e658b32e6f4f1[m
+Merge: e87a3dc 1759fd7
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Thu Oct 23 19:09:21 2025 -0300
+
+    merge with remote changes
+
+[33mcommit e87a3dc6ae5eafc7b7456dac8880104bdae4da3a[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Thu Oct 23 19:08:51 2025 -0300
+
+    replace with updated video
+
+[33mcommit 1759fd756ad0d565c21765b9c96fe5c795348d49[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: 22159ac 50785cc
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 16:49:26 2025 -0300
+
+    Merge branch 'master' of https://github.com/magnoitsystems/Agapanthus-Departments
+
+[33mcommit 22159ac0e0769304857dc20f40f77a694aa23d1e[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 16:49:21 2025 -0300
+
+    changed form background image
+
+[33mcommit 50785cc01dcf6614fffcfd78fd2d8117ba4649e5[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Fri Oct 17 15:38:59 2025 -0300
+
+    restore footer changes
+
+[33mcommit 39eb04294037a8b4ac3f8f316df246120009cbf2[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Fri Oct 17 14:46:35 2025 -0300
+
+    fix reviews cards in mobile
+
+[33mcommit 02eb2702cad48f735b2db0a54650a78da5224353[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Fri Oct 17 14:26:38 2025 -0300
+
+    restore reviews section changes from previous commit
+
+[33mcommit 1f9fe1ea0cd6f066dca48bb210daee5bda5e9437[m
+Merge: 210f3c2 90364ee
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Fri Oct 17 14:09:37 2025 -0300
+
+    merge with remote branch again
+
+[33mcommit 210f3c2b44d9bd5e05eb3e7d4b1ea429cf4346c2[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Fri Oct 17 14:04:38 2025 -0300
+
+    fix footer to make it prettier
+
+[33mcommit c34f7980991d11b67a2c76376b9da79af4946704[m
+Merge: 2b6d572 20e9dbe
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Fri Oct 17 13:49:13 2025 -0300
+
+    merge with remote branch
+
+[33mcommit 2b6d57273763773b7b9315becb796b97c3799e33[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Fri Oct 17 13:41:02 2025 -0300
+
+    finally fix reviews section and add tactile scroll
+
+[33mcommit d9cc11742a54c55eadbdc438a38d1122a9877885[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Fri Oct 17 13:33:24 2025 -0300
+
+    try to fix reviews carousel to remove automatic scroll
+
+[33mcommit 90364ee2656508b1afd0d3560d9ce993208bad6f[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:50:51 2025 -0300
+
+    removed large files
+
+[33mcommit 20e9dbea90172a945ff421d9cb17e334d29b64aa[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:50:51 2025 -0300
+
+    removed large files
+
+[33mcommit 1dbc95600b31fbeb8b1964e78b7de7b8aeede514[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:37:44 2025 -0300
+
+    test
+
+[33mcommit 70aa0d5dd743db15d12008ded00e404a6e3c24e2[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:37:44 2025 -0300
+
+    test
+
+[33mcommit c52048bf21f855415c63789304b3f4055041977a[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:29:49 2025 -0300
+
+    changed gallery images with new ones
+
+[33mcommit 8454cfba065856f36af3950185d16d4009712a48[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:29:49 2025 -0300
+
+    changed gallery images with new ones
+
+[33mcommit ed87993dc5f77d66b1a3b709b449cf01c9577980[m
+Merge: bed9ab2 7a1019b
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:17:53 2025 -0300
+
+    Merge branch 'master' of https://github.com/magnoitsystems/Agapanthus-Departments
+
+[33mcommit 77896bdc87e9498b93235d1650f28c0713f058e6[m
+Merge: ae486a8 7a1019b
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:17:53 2025 -0300
+
+    Merge branch 'master' of https://github.com/magnoitsystems/Agapanthus-Departments
+
+[33mcommit bed9ab211f29744703934d05748ec3431d8c5c86[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:17:48 2025 -0300
+
+    added lavanda new images
+
+[33mcommit ae486a807131e5a479dee0a758289874e70b60f7[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 12:17:48 2025 -0300
+
+    added lavanda new images
+
+[33mcommit 1b1f0634d91f4e16739c8b3c467b7531ea35d6d4[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 11:34:15 2025 -0300
+
+    added aqua new images
+
+[33mcommit cb2d9b664a338c4c2aad33e482ac3c3f3d66b856[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Oct 17 11:34:15 2025 -0300
+
+    added aqua new images
+
+[33mcommit 7a1019b9e15381fa5d70198f02714494560de233[m
+Author: Ana Bellinzona <anabellinzona@gmail.com>
+Date:   Tue Sep 23 13:28:46 2025 -0300
+
+    add the departaments email
+
+[33mcommit 29bf7d71febd8fe4c9cfc5f4e2d605aed9e96d75[m
+Merge: d14ef53 b4a474f
+Author: Ana Bellinzona <anabellinzona@gmail.com>
+Date:   Wed Sep 17 09:30:32 2025 -0300
+
+    test the email service
+
+[33mcommit d14ef534f31b25c2bf189cb76858dd9c357f15cc[m
+Author: Ana Bellinzona <anabellinzona@gmail.com>
+Date:   Wed Sep 17 09:29:44 2025 -0300
+
+    test the email service
+
+[33mcommit b4a474fed21a216d1748ebd8a4eb568ba1a86dd4[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Tue Sep 16 20:15:00 2025 -0300
+
+    remove changes and keep the real email for reservations
+
+[33mcommit c4b9bbf60f26defb16c1e7f98134211891b6ceb9[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Tue Sep 16 19:59:56 2025 -0300
+
+    change for test the reservation email
+
+[33mcommit 051c3a41b21ffbeb26f4f7d26476d2e2248f0c23[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Tue Sep 16 19:59:03 2025 -0300
+
+    change email destination for reservations
+
+[33mcommit b8e47c86e946aa226b9f0c396f3f22c83990b216[m
+Merge: 9865023 ecc94f4
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Sep 12 21:35:07 2025 -0300
+
+    Merge branch 'master' of https://github.com/magnoitsystems/Agapanthus-Departments
+
+[33mcommit 9865023bf861dea0436253bfbbf4e44c2894695d[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Fri Sep 12 21:34:58 2025 -0300
+
+    added lavanda images
+
+[33mcommit ecc94f4d7ef17e6512a646629eed0d16baf1c5ae[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Tue Sep 9 21:12:55 2025 -0300
+
+    add sitemap config
+
+[33mcommit 867b40e578b5852dbe3bde97498616b9774f09ef[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Tue Sep 9 20:54:51 2025 -0300
+
+    fix layout adding information and keywords for better seo
+
+[33mcommit 5cd1fb243d1e6e6fd31fdd4043d5859a886e5c88[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Tue Sep 9 20:33:10 2025 -0300
+
+    replace with real ubication
+
+[33mcommit 2f321bb183486d1f8534f3ce197afb5965a9eef2[m
+Author: milagros alvarez <milagrosalvarez2604@gmail.com>
+Date:   Tue Sep 9 20:27:30 2025 -0300
+
+    replace test image in form section with a real one
+
+[33mcommit 404a81006c442bd550d27bdfe79a23834a599364[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Wed Sep 3 11:48:34 2025 -0300
+
+    fix footer
+
+[33mcommit a77fdc6d017b32e926faf1ee37a2afe5bd7ac314[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Wed Sep 3 11:30:49 2025 -0300
+
+    change some details
+
+[33mcommit 7512a387645b3b8343ffa0811eadac86557582d9[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Wed Sep 3 11:24:07 2025 -0300
+
+    change aqua images
+
+[33mcommit 257770411b28d4458a1e83f8cdc39538d75627f1[m
+Author: Agostina Bidegain <agostinabidegain@gmail.com>
+Date:   Wed Sep 3 11:10:43 2025 -0300
+
+    changed aqua features
+
+[33mcommit c57f493728f4a658708152688e599e112b4ccc82[m
+Author: Agostina Bidegain <
